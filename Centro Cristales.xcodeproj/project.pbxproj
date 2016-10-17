@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94DE59001DB4581C00DCF446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE58FF1DB4581C00DCF446 /* AppDelegate.swift */; };
+		94DE59021DB4581C00DCF446 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59011DB4581C00DCF446 /* ViewController.swift */; };
+		94DE59051DB4581C00DCF446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DE59031DB4581C00DCF446 /* Main.storyboard */; };
+		94DE59081DB4581C00DCF446 /* Centro_Cristales.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59061DB4581C00DCF446 /* Centro_Cristales.xcdatamodeld */; };
+		94DE590A1DB4581C00DCF446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94DE59091DB4581C00DCF446 /* Assets.xcassets */; };
+		94DE590D1DB4581C00DCF446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DE590B1DB4581C00DCF446 /* LaunchScreen.storyboard */; };
+		94DE59181DB4581C00DCF446 /* Centro_CristalesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59171DB4581C00DCF446 /* Centro_CristalesTests.swift */; };
+		94DE59231DB4581C00DCF446 /* Centro_CristalesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59221DB4581C00DCF446 /* Centro_CristalesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94DE59141DB4581C00DCF446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94DE58F41DB4581B00DCF446 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94DE58FB1DB4581B00DCF446;
+			remoteInfo = "Centro Cristales";
+		};
+		94DE591F1DB4581C00DCF446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94DE58F41DB4581B00DCF446 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94DE58FB1DB4581B00DCF446;
+			remoteInfo = "Centro Cristales";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		94DE58FC1DB4581C00DCF446 /* Centro Cristales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Centro Cristales.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94DE58FF1DB4581C00DCF446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94DE59011DB4581C00DCF446 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94DE59041DB4581C00DCF446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94DE59071DB4581C00DCF446 /* Centro_Cristales.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Centro_Cristales.xcdatamodel; sourceTree = "<group>"; };
+		94DE59091DB4581C00DCF446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94DE590C1DB4581C00DCF446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		94DE590E1DB4581C00DCF446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94DE59131DB4581C00DCF446 /* Centro CristalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Centro CristalesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94DE59171DB4581C00DCF446 /* Centro_CristalesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centro_CristalesTests.swift; sourceTree = "<group>"; };
+		94DE59191DB4581C00DCF446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94DE591E1DB4581C00DCF446 /* Centro CristalesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Centro CristalesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94DE59221DB4581C00DCF446 /* Centro_CristalesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centro_CristalesUITests.swift; sourceTree = "<group>"; };
+		94DE59241DB4581C00DCF446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94DE58F91DB4581B00DCF446 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94DE59101DB4581C00DCF446 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94DE591B1DB4581C00DCF446 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94DE58F31DB4581B00DCF446 = {
+			isa = PBXGroup;
+			children = (
+				94DE58FE1DB4581C00DCF446 /* Centro Cristales */,
+				94DE59161DB4581C00DCF446 /* Centro CristalesTests */,
+				94DE59211DB4581C00DCF446 /* Centro CristalesUITests */,
+				94DE58FD1DB4581C00DCF446 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94DE58FD1DB4581C00DCF446 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94DE58FC1DB4581C00DCF446 /* Centro Cristales.app */,
+				94DE59131DB4581C00DCF446 /* Centro CristalesTests.xctest */,
+				94DE591E1DB4581C00DCF446 /* Centro CristalesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94DE58FE1DB4581C00DCF446 /* Centro Cristales */ = {
+			isa = PBXGroup;
+			children = (
+				94DE58FF1DB4581C00DCF446 /* AppDelegate.swift */,
+				94DE59011DB4581C00DCF446 /* ViewController.swift */,
+				94DE59031DB4581C00DCF446 /* Main.storyboard */,
+				94DE59091DB4581C00DCF446 /* Assets.xcassets */,
+				94DE590B1DB4581C00DCF446 /* LaunchScreen.storyboard */,
+				94DE590E1DB4581C00DCF446 /* Info.plist */,
+				94DE59061DB4581C00DCF446 /* Centro_Cristales.xcdatamodeld */,
+			);
+			path = "Centro Cristales";
+			sourceTree = "<group>";
+		};
+		94DE59161DB4581C00DCF446 /* Centro CristalesTests */ = {
+			isa = PBXGroup;
+			children = (
+				94DE59171DB4581C00DCF446 /* Centro_CristalesTests.swift */,
+				94DE59191DB4581C00DCF446 /* Info.plist */,
+			);
+			path = "Centro CristalesTests";
+			sourceTree = "<group>";
+		};
+		94DE59211DB4581C00DCF446 /* Centro CristalesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				94DE59221DB4581C00DCF446 /* Centro_CristalesUITests.swift */,
+				94DE59241DB4581C00DCF446 /* Info.plist */,
+			);
+			path = "Centro CristalesUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94DE58FB1DB4581B00DCF446 /* Centro Cristales */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94DE59271DB4581C00DCF446 /* Build configuration list for PBXNativeTarget "Centro Cristales" */;
+			buildPhases = (
+				94DE58F81DB4581B00DCF446 /* Sources */,
+				94DE58F91DB4581B00DCF446 /* Frameworks */,
+				94DE58FA1DB4581B00DCF446 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Centro Cristales";
+			productName = "Centro Cristales";
+			productReference = 94DE58FC1DB4581C00DCF446 /* Centro Cristales.app */;
+			productType = "com.apple.product-type.application";
+		};
+		94DE59121DB4581C00DCF446 /* Centro CristalesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94DE592A1DB4581C00DCF446 /* Build configuration list for PBXNativeTarget "Centro CristalesTests" */;
+			buildPhases = (
+				94DE590F1DB4581C00DCF446 /* Sources */,
+				94DE59101DB4581C00DCF446 /* Frameworks */,
+				94DE59111DB4581C00DCF446 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94DE59151DB4581C00DCF446 /* PBXTargetDependency */,
+			);
+			name = "Centro CristalesTests";
+			productName = "Centro CristalesTests";
+			productReference = 94DE59131DB4581C00DCF446 /* Centro CristalesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		94DE591D1DB4581C00DCF446 /* Centro CristalesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94DE592D1DB4581C00DCF446 /* Build configuration list for PBXNativeTarget "Centro CristalesUITests" */;
+			buildPhases = (
+				94DE591A1DB4581C00DCF446 /* Sources */,
+				94DE591B1DB4581C00DCF446 /* Frameworks */,
+				94DE591C1DB4581C00DCF446 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94DE59201DB4581C00DCF446 /* PBXTargetDependency */,
+			);
+			name = "Centro CristalesUITests";
+			productName = "Centro CristalesUITests";
+			productReference = 94DE591E1DB4581C00DCF446 /* Centro CristalesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94DE58F41DB4581B00DCF446 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Gustavo Franco";
+				TargetAttributes = {
+					94DE58FB1DB4581B00DCF446 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = LQRYUWUP72;
+						ProvisioningStyle = Automatic;
+					};
+					94DE59121DB4581C00DCF446 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = LQRYUWUP72;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 94DE58FB1DB4581B00DCF446;
+					};
+					94DE591D1DB4581C00DCF446 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = LQRYUWUP72;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 94DE58FB1DB4581B00DCF446;
+					};
+				};
+			};
+			buildConfigurationList = 94DE58F71DB4581B00DCF446 /* Build configuration list for PBXProject "Centro Cristales" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94DE58F31DB4581B00DCF446;
+			productRefGroup = 94DE58FD1DB4581C00DCF446 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94DE58FB1DB4581B00DCF446 /* Centro Cristales */,
+				94DE59121DB4581C00DCF446 /* Centro CristalesTests */,
+				94DE591D1DB4581C00DCF446 /* Centro CristalesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94DE58FA1DB4581B00DCF446 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94DE590D1DB4581C00DCF446 /* LaunchScreen.storyboard in Resources */,
+				94DE590A1DB4581C00DCF446 /* Assets.xcassets in Resources */,
+				94DE59051DB4581C00DCF446 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94DE59111DB4581C00DCF446 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94DE591C1DB4581C00DCF446 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94DE58F81DB4581B00DCF446 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94DE59081DB4581C00DCF446 /* Centro_Cristales.xcdatamodeld in Sources */,
+				94DE59021DB4581C00DCF446 /* ViewController.swift in Sources */,
+				94DE59001DB4581C00DCF446 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94DE590F1DB4581C00DCF446 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94DE59181DB4581C00DCF446 /* Centro_CristalesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94DE591A1DB4581C00DCF446 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94DE59231DB4581C00DCF446 /* Centro_CristalesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94DE59151DB4581C00DCF446 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94DE58FB1DB4581B00DCF446 /* Centro Cristales */;
+			targetProxy = 94DE59141DB4581C00DCF446 /* PBXContainerItemProxy */;
+		};
+		94DE59201DB4581C00DCF446 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94DE58FB1DB4581B00DCF446 /* Centro Cristales */;
+			targetProxy = 94DE591F1DB4581C00DCF446 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		94DE59031DB4581C00DCF446 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94DE59041DB4581C00DCF446 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		94DE590B1DB4581C00DCF446 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94DE590C1DB4581C00DCF446 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94DE59251DB4581C00DCF446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94DE59261DB4581C00DCF446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94DE59281DB4581C00DCF446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LQRYUWUP72;
+				INFOPLIST_FILE = "Centro Cristales/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CC.Centro-Cristales";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		94DE59291DB4581C00DCF446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LQRYUWUP72;
+				INFOPLIST_FILE = "Centro Cristales/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CC.Centro-Cristales";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		94DE592B1DB4581C00DCF446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = LQRYUWUP72;
+				INFOPLIST_FILE = "Centro CristalesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CC.Centro-CristalesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Centro Cristales.app/Centro Cristales";
+			};
+			name = Debug;
+		};
+		94DE592C1DB4581C00DCF446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = LQRYUWUP72;
+				INFOPLIST_FILE = "Centro CristalesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CC.Centro-CristalesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Centro Cristales.app/Centro Cristales";
+			};
+			name = Release;
+		};
+		94DE592E1DB4581C00DCF446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = LQRYUWUP72;
+				INFOPLIST_FILE = "Centro CristalesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CC.Centro-CristalesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Centro Cristales";
+			};
+			name = Debug;
+		};
+		94DE592F1DB4581C00DCF446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = LQRYUWUP72;
+				INFOPLIST_FILE = "Centro CristalesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CC.Centro-CristalesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Centro Cristales";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94DE58F71DB4581B00DCF446 /* Build configuration list for PBXProject "Centro Cristales" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94DE59251DB4581C00DCF446 /* Debug */,
+				94DE59261DB4581C00DCF446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94DE59271DB4581C00DCF446 /* Build configuration list for PBXNativeTarget "Centro Cristales" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94DE59281DB4581C00DCF446 /* Debug */,
+				94DE59291DB4581C00DCF446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		94DE592A1DB4581C00DCF446 /* Build configuration list for PBXNativeTarget "Centro CristalesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94DE592B1DB4581C00DCF446 /* Debug */,
+				94DE592C1DB4581C00DCF446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		94DE592D1DB4581C00DCF446 /* Build configuration list for PBXNativeTarget "Centro CristalesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94DE592E1DB4581C00DCF446 /* Debug */,
+				94DE592F1DB4581C00DCF446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		94DE59061DB4581C00DCF446 /* Centro_Cristales.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				94DE59071DB4581C00DCF446 /* Centro_Cristales.xcdatamodel */,
+			);
+			currentVersion = 94DE59071DB4581C00DCF446 /* Centro_Cristales.xcdatamodel */;
+			path = Centro_Cristales.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 94DE58F41DB4581B00DCF446 /* Project object */;
+}
