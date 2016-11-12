@@ -10,18 +10,17 @@
 		9455775C1DCDDFFD005DE374 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9455775B1DCDDFFD005DE374 /* APIClient.swift */; };
 		9455775E1DCDFEBB005DE374 /* WorkOrderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9455775D1DCDFEBB005DE374 /* WorkOrderAPI.swift */; };
 		945577611DCE0CCA005DE374 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945577601DCE0CCA005DE374 /* Car.swift */; };
-		945577641DCE1F9B005DE374 /* ResultadoJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945577631DCE1F9B005DE374 /* ResultadoJson.swift */; };
 		945577661DCE929C005DE374 /* WorkOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945577651DCE929C005DE374 /* WorkOrder.swift */; };
 		94B9D57F1DD2B14A00D554E6 /* CarStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9D57E1DD2B14A00D554E6 /* CarStatusController.swift */; };
 		94B9D5811DD2B24D00D554E6 /* CarBudgetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9D5801DD2B24D00D554E6 /* CarBudgetController.swift */; };
+		94B9D5871DD714E200D554E6 /* CarRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9D5861DD714E200D554E6 /* CarRepository.swift */; };
 		94DE59001DB4581C00DCF446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE58FF1DB4581C00DCF446 /* AppDelegate.swift */; };
 		94DE59021DB4581C00DCF446 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59011DB4581C00DCF446 /* ViewController.swift */; };
 		94DE59051DB4581C00DCF446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DE59031DB4581C00DCF446 /* Main.storyboard */; };
 		94DE59081DB4581C00DCF446 /* Centro_Cristales.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59061DB4581C00DCF446 /* Centro_Cristales.xcdatamodeld */; };
 		94DE590A1DB4581C00DCF446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94DE59091DB4581C00DCF446 /* Assets.xcassets */; };
 		94DE590D1DB4581C00DCF446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DE590B1DB4581C00DCF446 /* LaunchScreen.storyboard */; };
-		94DE59181DB4581C00DCF446 /* Centro_CristalesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59171DB4581C00DCF446 /* Centro_CristalesTests.swift */; };
-		94DE59231DB4581C00DCF446 /* Centro_CristalesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59221DB4581C00DCF446 /* Centro_CristalesUITests.swift */; };
+		94DE59181DB4581C00DCF446 /* CarRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59171DB4581C00DCF446 /* CarRepositoryTests.swift */; };
 		94DE59511DC02B2A00DCF446 /* background_image_home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94DE594F1DC02B2A00DCF446 /* background_image_home.jpg */; };
 		94DE59521DC02B2A00DCF446 /* background_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94DE59501DC02B2A00DCF446 /* background_image.jpg */; };
 /* End PBXBuildFile section */
@@ -47,10 +46,10 @@
 		9455775B1DCDDFFD005DE374 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		9455775D1DCDFEBB005DE374 /* WorkOrderAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderAPI.swift; sourceTree = "<group>"; };
 		945577601DCE0CCA005DE374 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
-		945577631DCE1F9B005DE374 /* ResultadoJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultadoJson.swift; sourceTree = "<group>"; };
 		945577651DCE929C005DE374 /* WorkOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrder.swift; sourceTree = "<group>"; };
 		94B9D57E1DD2B14A00D554E6 /* CarStatusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarStatusController.swift; sourceTree = "<group>"; };
 		94B9D5801DD2B24D00D554E6 /* CarBudgetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarBudgetController.swift; sourceTree = "<group>"; };
+		94B9D5861DD714E200D554E6 /* CarRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarRepository.swift; sourceTree = "<group>"; };
 		94DE58FC1DB4581C00DCF446 /* Centro Cristales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Centro Cristales.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DE58FF1DB4581C00DCF446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94DE59011DB4581C00DCF446 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,11 +59,9 @@
 		94DE590C1DB4581C00DCF446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94DE590E1DB4581C00DCF446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94DE59131DB4581C00DCF446 /* Centro CristalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Centro CristalesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		94DE59171DB4581C00DCF446 /* Centro_CristalesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centro_CristalesTests.swift; sourceTree = "<group>"; };
+		94DE59171DB4581C00DCF446 /* CarRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepositoryTests.swift; sourceTree = "<group>"; };
 		94DE59191DB4581C00DCF446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94DE591E1DB4581C00DCF446 /* Centro CristalesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Centro CristalesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		94DE59221DB4581C00DCF446 /* Centro_CristalesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centro_CristalesUITests.swift; sourceTree = "<group>"; };
-		94DE59241DB4581C00DCF446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94DE594F1DC02B2A00DCF446 /* background_image_home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_image_home.jpg; sourceTree = "<group>"; };
 		94DE59501DC02B2A00DCF446 /* background_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_image.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +94,6 @@
 		9455775A1DCDDD8A005DE374 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				945577621DCE1F45005DE374 /* APIRepresentations */,
 				9455775B1DCDDFFD005DE374 /* APIClient.swift */,
 				9455775D1DCDFEBB005DE374 /* WorkOrderAPI.swift */,
 			);
@@ -114,12 +110,20 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		945577621DCE1F45005DE374 /* APIRepresentations */ = {
+		94B9D5821DD70F3300D554E6 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				945577631DCE1F9B005DE374 /* ResultadoJson.swift */,
+				94B9D5851DD714B300D554E6 /* Protocols */,
 			);
-			name = APIRepresentations;
+			name = Repositories;
+			sourceTree = "<group>";
+		};
+		94B9D5851DD714B300D554E6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				94B9D5861DD714E200D554E6 /* CarRepository.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		94DE58F31DB4581B00DCF446 = {
@@ -127,7 +131,6 @@
 			children = (
 				94DE58FE1DB4581C00DCF446 /* Centro Cristales */,
 				94DE59161DB4581C00DCF446 /* Centro CristalesTests */,
-				94DE59211DB4581C00DCF446 /* Centro CristalesUITests */,
 				94DE58FD1DB4581C00DCF446 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 		94DE58FE1DB4581C00DCF446 /* Centro Cristales */ = {
 			isa = PBXGroup;
 			children = (
+				94B9D5821DD70F3300D554E6 /* Repositories */,
 				9455775F1DCE0C95005DE374 /* Domain */,
 				9455775A1DCDDD8A005DE374 /* APIClient */,
 				94DE594E1DC02AEC00DCF446 /* Assets */,
@@ -164,19 +168,10 @@
 		94DE59161DB4581C00DCF446 /* Centro CristalesTests */ = {
 			isa = PBXGroup;
 			children = (
-				94DE59171DB4581C00DCF446 /* Centro_CristalesTests.swift */,
+				94DE59171DB4581C00DCF446 /* CarRepositoryTests.swift */,
 				94DE59191DB4581C00DCF446 /* Info.plist */,
 			);
 			path = "Centro CristalesTests";
-			sourceTree = "<group>";
-		};
-		94DE59211DB4581C00DCF446 /* Centro CristalesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				94DE59221DB4581C00DCF446 /* Centro_CristalesUITests.swift */,
-				94DE59241DB4581C00DCF446 /* Info.plist */,
-			);
-			path = "Centro CristalesUITests";
 			sourceTree = "<group>";
 		};
 		94DE594E1DC02AEC00DCF446 /* Assets */ = {
@@ -338,10 +333,10 @@
 				94B9D57F1DD2B14A00D554E6 /* CarStatusController.swift in Sources */,
 				94DE59081DB4581C00DCF446 /* Centro_Cristales.xcdatamodeld in Sources */,
 				945577661DCE929C005DE374 /* WorkOrder.swift in Sources */,
-				945577641DCE1F9B005DE374 /* ResultadoJson.swift in Sources */,
 				9455775E1DCDFEBB005DE374 /* WorkOrderAPI.swift in Sources */,
 				945577611DCE0CCA005DE374 /* Car.swift in Sources */,
 				94DE59021DB4581C00DCF446 /* ViewController.swift in Sources */,
+				94B9D5871DD714E200D554E6 /* CarRepository.swift in Sources */,
 				94B9D5811DD2B24D00D554E6 /* CarBudgetController.swift in Sources */,
 				94DE59001DB4581C00DCF446 /* AppDelegate.swift in Sources */,
 				9455775C1DCDDFFD005DE374 /* APIClient.swift in Sources */,
@@ -352,7 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94DE59181DB4581C00DCF446 /* Centro_CristalesTests.swift in Sources */,
+				94DE59181DB4581C00DCF446 /* CarRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +355,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94DE59231DB4581C00DCF446 /* Centro_CristalesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +411,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -467,6 +462,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

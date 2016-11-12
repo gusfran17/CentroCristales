@@ -10,8 +10,9 @@
 import UIKit
 
 class CarStatusController: UIViewController {
-
-    @IBOutlet weak var btnRequestCarStatus: UIButton!
+    
+    @IBOutlet weak var workOrderTextField: UITextField!
+    @IBOutlet weak var badgeTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,29 @@ class CarStatusController: UIViewController {
     }
     
 
+    @IBAction func requestCarStatus(_ sender: AnyObject) {
+        let workOrder = workOrderTextField.text
+        let badge = badgeTextField.text
+        if workOrder == "" || badge == "" {
+            var message = "Faltan los siguientes datos:"
+            if workOrder == "" {
+                message += "\nNumero de orden "
+            }
+            if badge == "" {
+                message += "\nDominio"
+            }
+            showAlert(message: message)
+        }
+    }
+
+    
+    func showAlert(message: String){
+        let alertController = UIAlertController(title: "Faltan Datos", message:
+            message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

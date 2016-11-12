@@ -132,6 +132,9 @@
                                     <constraint firstAttribute="height" constant="50" id="4sh-lT-PXt"/>
                                 </constraints>
                                 <state key="normal" title="CONSULTAR ESTADO"/>
+                                <connections>
+                                    <action selector="requestCarStatus:" destination="4ba-lD-QpI" eventType="touchUpInside" id="4ty-zf-7qG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -158,7 +161,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnRequestCarStatus" destination="ZzD-J8-0Ry" id="n4C-1Y-kR5"/>
+                        <outlet property="badgeTextField" destination="9Zy-CX-p4q" id="12g-WH-zUc"/>
+                        <outlet property="workOrderTextField" destination="z8z-hZ-IzP" id="aMp-mT-7g0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wsb-Qz-SXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -256,7 +260,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnSendBudgetReqeust" destination="oKV-9T-BQB" id="9L7-CG-nKV"/>
+                        <outlet property="emailTextField" destination="Sd6-t3-hsT" id="cdW-Ke-sTc"/>
+                        <outlet property="messageTextField" destination="4pK-TI-qrZ" id="rao-CM-a6a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTv-V4-Wi6" userLabel="First Responder" sceneMemberID="firstResponder"/>

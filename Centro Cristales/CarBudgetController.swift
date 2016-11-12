@@ -9,9 +9,10 @@
 import UIKit
 
 class CarBudgetController: UIViewController {
-    
-    @IBOutlet weak var btnSendBudgetReqeust: UIButton!
 
+    @IBOutlet weak var messageTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -9,7 +9,9 @@
 import XCTest
 @testable import Centro_Cristales
 
-class Centro_CristalesTests: XCTestCase {
+class CarRepositoryTests: XCTestCase {
+    
+    let someVar = ""
     
     override func setUp() {
         super.setUp()
@@ -22,8 +24,7 @@ class Centro_CristalesTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(someVar, "")
     }
     
     func testPerformanceExample() {
@@ -32,5 +33,7 @@ class Centro_CristalesTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    
     
 }

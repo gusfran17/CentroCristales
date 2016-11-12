@@ -46,6 +46,7 @@ class WorkOrderAPIClient : APIClient {
     }
     
     func fetchCurrentStatus(workOder: String, badge: String, completion: @escaping (APIResult<Car>) -> Void){
+        
         let request = WorkOrderEndpoint.Status(workOrder: workOder, badge: badge).request
         
         fetch(request: request, parse: { (json) -> Car? in

@@ -38,16 +38,6 @@
                ReferencedContainer = "container:Centro Cristales.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "94DE591D1DB4581C00DCF446"
-               BuildableName = "Centro CristalesUITests.xctest"
-               BlueprintName = "Centro CristalesUITests"
-               ReferencedContainer = "container:Centro Cristales.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
