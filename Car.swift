@@ -20,11 +20,11 @@ struct Car {
 }
 
 extension Car: JSONDecodable {
-    init?(JSON: [[String: AnyObject]], badge: String) {
-        guard let workOrderId = JSON[0]["id_presupuesto"] as? Int,
-            let status = JSON[0]["id_estado"] as? String,
-            let statusDesc = JSON[0]["descripcionEstado"] as? String,
-            let remarks = JSON[0]["observaciones"] as? String else {
+    init?(JSON: [String: AnyObject], badge: String) {
+        guard let workOrderId = JSON["id_presupuesto"] as? Int,
+            let status = JSON["id_estado"] as? String,
+            let statusDesc = JSON["descripcionEstado"] as? String,
+            let remarks = JSON["observaciones"] as? String else {
                 return nil
         }
         let statusEnum = Status(rawValue: status, remark: statusDesc)

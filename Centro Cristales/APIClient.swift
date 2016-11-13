@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public let TRENetworkingErrorDomain = "com.treehouse.Stormy.NetworkingError"
+public let TRENetworkingErrorDomain = "com.treehouse.CentroCristales.NetworkingError"
 public let MissingHTTPResponseError: Int = 10
 public let UnexpectedResponseError: Int = 20
 
@@ -21,7 +21,7 @@ enum APIResult<T> {
 }
 
 protocol JSONDecodable {
-    init?(JSON: [[String: AnyObject]], badge: String)
+    init?(JSON: [String: AnyObject], badge: String)
 }
 
 protocol Endpoint {
@@ -39,16 +39,11 @@ protocol APIClient {
 }
 
 extension APIClient {
-    func JSONTaskWithRequest(request: URLRequest, completion: @escaping JSONTaskCompletion) -> JSONTask {
+    public func JSONTaskWithRequest(request: URLRequest, completion: @escaping JSONTaskCompletion) -> JSONTask {
         
         let task = session.dataTask(with: request) { data, response, error in
             
             guard let HTTPResponse = response as? HTTPURLResponse else {
-                let userInfo = [
-                    NSLocalizedDescriptionKey: NSLocalizedString("Missing HTTP Response", comment: "")
-                ]
-                
-                let error = NSError(domain: TRENetworkingErrorDomain, code: MissingHTTPResponseError, userInfo: userInfo)
                 completion(nil, nil, error)
                 return
             }
@@ -74,7 +69,7 @@ extension APIClient {
         return task
     }
     
-    func fetch<T>(request: URLRequest, parse: @escaping (JSON) -> T?, completion: @escaping (APIResult<T>) -> Void) {
+    public func fetch<T>(request: URLRequest, parse: @escaping (JSON) -> T?, completion: @escaping (APIResult<T>) -> Void) {
         
         let task = JSONTaskWithRequest(request: request) { json, response, error in
             

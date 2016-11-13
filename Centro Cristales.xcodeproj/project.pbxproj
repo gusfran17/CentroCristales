@@ -7,20 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		941F6B0D1DD8ADA1008CBCD8 /* CarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F6B0C1DD8ADA1008CBCD8 /* CarTests.swift */; };
 		9455775C1DCDDFFD005DE374 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9455775B1DCDDFFD005DE374 /* APIClient.swift */; };
-		9455775E1DCDFEBB005DE374 /* WorkOrderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9455775D1DCDFEBB005DE374 /* WorkOrderAPI.swift */; };
+		9455775E1DCDFEBB005DE374 /* WorkOrderAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9455775D1DCDFEBB005DE374 /* WorkOrderAPIClient.swift */; };
 		945577611DCE0CCA005DE374 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945577601DCE0CCA005DE374 /* Car.swift */; };
 		945577661DCE929C005DE374 /* WorkOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945577651DCE929C005DE374 /* WorkOrder.swift */; };
 		94B9D57F1DD2B14A00D554E6 /* CarStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9D57E1DD2B14A00D554E6 /* CarStatusController.swift */; };
 		94B9D5811DD2B24D00D554E6 /* CarBudgetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9D5801DD2B24D00D554E6 /* CarBudgetController.swift */; };
-		94B9D5871DD714E200D554E6 /* CarRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9D5861DD714E200D554E6 /* CarRepository.swift */; };
+		94B9D5911DD760AA00D554E6 /* WorkOrderAPIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9D5901DD760AA00D554E6 /* WorkOrderAPIClientProtocol.swift */; };
+		94B9D5941DD7640500D554E6 /* CarServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9D5931DD7640500D554E6 /* CarServicing.swift */; };
+		94B9D5961DD764F900D554E6 /* CarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9D5951DD764F900D554E6 /* CarService.swift */; };
 		94DE59001DB4581C00DCF446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE58FF1DB4581C00DCF446 /* AppDelegate.swift */; };
 		94DE59021DB4581C00DCF446 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59011DB4581C00DCF446 /* ViewController.swift */; };
 		94DE59051DB4581C00DCF446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DE59031DB4581C00DCF446 /* Main.storyboard */; };
 		94DE59081DB4581C00DCF446 /* Centro_Cristales.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59061DB4581C00DCF446 /* Centro_Cristales.xcdatamodeld */; };
 		94DE590A1DB4581C00DCF446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94DE59091DB4581C00DCF446 /* Assets.xcassets */; };
 		94DE590D1DB4581C00DCF446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DE590B1DB4581C00DCF446 /* LaunchScreen.storyboard */; };
-		94DE59181DB4581C00DCF446 /* CarRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59171DB4581C00DCF446 /* CarRepositoryTests.swift */; };
+		94DE59181DB4581C00DCF446 /* CarServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59171DB4581C00DCF446 /* CarServiceTests.swift */; };
 		94DE59511DC02B2A00DCF446 /* background_image_home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94DE594F1DC02B2A00DCF446 /* background_image_home.jpg */; };
 		94DE59521DC02B2A00DCF446 /* background_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94DE59501DC02B2A00DCF446 /* background_image.jpg */; };
 /* End PBXBuildFile section */
@@ -43,13 +46,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		941F6B0C1DD8ADA1008CBCD8 /* CarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTests.swift; sourceTree = "<group>"; };
 		9455775B1DCDDFFD005DE374 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		9455775D1DCDFEBB005DE374 /* WorkOrderAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderAPI.swift; sourceTree = "<group>"; };
+		9455775D1DCDFEBB005DE374 /* WorkOrderAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderAPIClient.swift; sourceTree = "<group>"; };
 		945577601DCE0CCA005DE374 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		945577651DCE929C005DE374 /* WorkOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrder.swift; sourceTree = "<group>"; };
 		94B9D57E1DD2B14A00D554E6 /* CarStatusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarStatusController.swift; sourceTree = "<group>"; };
 		94B9D5801DD2B24D00D554E6 /* CarBudgetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarBudgetController.swift; sourceTree = "<group>"; };
-		94B9D5861DD714E200D554E6 /* CarRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarRepository.swift; sourceTree = "<group>"; };
+		94B9D5901DD760AA00D554E6 /* WorkOrderAPIClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderAPIClientProtocol.swift; sourceTree = "<group>"; };
+		94B9D5931DD7640500D554E6 /* CarServicing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarServicing.swift; sourceTree = "<group>"; };
+		94B9D5951DD764F900D554E6 /* CarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarService.swift; sourceTree = "<group>"; };
 		94DE58FC1DB4581C00DCF446 /* Centro Cristales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Centro Cristales.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DE58FF1DB4581C00DCF446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94DE59011DB4581C00DCF446 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +65,7 @@
 		94DE590C1DB4581C00DCF446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94DE590E1DB4581C00DCF446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94DE59131DB4581C00DCF446 /* Centro CristalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Centro CristalesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		94DE59171DB4581C00DCF446 /* CarRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepositoryTests.swift; sourceTree = "<group>"; };
+		94DE59171DB4581C00DCF446 /* CarServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceTests.swift; sourceTree = "<group>"; };
 		94DE59191DB4581C00DCF446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94DE591E1DB4581C00DCF446 /* Centro CristalesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Centro CristalesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DE594F1DC02B2A00DCF446 /* background_image_home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_image_home.jpg; sourceTree = "<group>"; };
@@ -91,11 +97,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		941F6B0E1DD8CB07008CBCD8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				94DE59011DB4581C00DCF446 /* ViewController.swift */,
+				94B9D5801DD2B24D00D554E6 /* CarBudgetController.swift */,
+				94B9D57E1DD2B14A00D554E6 /* CarStatusController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		9455775A1DCDDD8A005DE374 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
+				94B9D58F1DD7608900D554E6 /* Protocols */,
 				9455775B1DCDDFFD005DE374 /* APIClient.swift */,
-				9455775D1DCDFEBB005DE374 /* WorkOrderAPI.swift */,
+				9455775D1DCDFEBB005DE374 /* WorkOrderAPIClient.swift */,
 			);
 			name = APIClient;
 			sourceTree = "<group>";
@@ -110,20 +127,21 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		94B9D5821DD70F3300D554E6 /* Repositories */ = {
+		94B9D58F1DD7608900D554E6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				94B9D5851DD714B300D554E6 /* Protocols */,
-			);
-			name = Repositories;
-			sourceTree = "<group>";
-		};
-		94B9D5851DD714B300D554E6 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				94B9D5861DD714E200D554E6 /* CarRepository.swift */,
+				94B9D5901DD760AA00D554E6 /* WorkOrderAPIClientProtocol.swift */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		94B9D5921DD763E500D554E6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				94B9D5931DD7640500D554E6 /* CarServicing.swift */,
+				94B9D5951DD764F900D554E6 /* CarService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		94DE58F31DB4581B00DCF446 = {
@@ -148,15 +166,13 @@
 		94DE58FE1DB4581C00DCF446 /* Centro Cristales */ = {
 			isa = PBXGroup;
 			children = (
-				94B9D5821DD70F3300D554E6 /* Repositories */,
+				94B9D5921DD763E500D554E6 /* Services */,
 				9455775F1DCE0C95005DE374 /* Domain */,
 				9455775A1DCDDD8A005DE374 /* APIClient */,
 				94DE594E1DC02AEC00DCF446 /* Assets */,
+				941F6B0E1DD8CB07008CBCD8 /* Controllers */,
 				94DE58FF1DB4581C00DCF446 /* AppDelegate.swift */,
-				94DE59011DB4581C00DCF446 /* ViewController.swift */,
 				94DE59031DB4581C00DCF446 /* Main.storyboard */,
-				94B9D5801DD2B24D00D554E6 /* CarBudgetController.swift */,
-				94B9D57E1DD2B14A00D554E6 /* CarStatusController.swift */,
 				94DE59091DB4581C00DCF446 /* Assets.xcassets */,
 				94DE590B1DB4581C00DCF446 /* LaunchScreen.storyboard */,
 				94DE590E1DB4581C00DCF446 /* Info.plist */,
@@ -168,8 +184,9 @@
 		94DE59161DB4581C00DCF446 /* Centro CristalesTests */ = {
 			isa = PBXGroup;
 			children = (
-				94DE59171DB4581C00DCF446 /* CarRepositoryTests.swift */,
+				94DE59171DB4581C00DCF446 /* CarServiceTests.swift */,
 				94DE59191DB4581C00DCF446 /* Info.plist */,
+				941F6B0C1DD8ADA1008CBCD8 /* CarTests.swift */,
 			);
 			path = "Centro CristalesTests";
 			sourceTree = "<group>";
@@ -332,11 +349,13 @@
 			files = (
 				94B9D57F1DD2B14A00D554E6 /* CarStatusController.swift in Sources */,
 				94DE59081DB4581C00DCF446 /* Centro_Cristales.xcdatamodeld in Sources */,
+				94B9D5911DD760AA00D554E6 /* WorkOrderAPIClientProtocol.swift in Sources */,
+				94B9D5941DD7640500D554E6 /* CarServicing.swift in Sources */,
 				945577661DCE929C005DE374 /* WorkOrder.swift in Sources */,
-				9455775E1DCDFEBB005DE374 /* WorkOrderAPI.swift in Sources */,
+				9455775E1DCDFEBB005DE374 /* WorkOrderAPIClient.swift in Sources */,
+				94B9D5961DD764F900D554E6 /* CarService.swift in Sources */,
 				945577611DCE0CCA005DE374 /* Car.swift in Sources */,
 				94DE59021DB4581C00DCF446 /* ViewController.swift in Sources */,
-				94B9D5871DD714E200D554E6 /* CarRepository.swift in Sources */,
 				94B9D5811DD2B24D00D554E6 /* CarBudgetController.swift in Sources */,
 				94DE59001DB4581C00DCF446 /* AppDelegate.swift in Sources */,
 				9455775C1DCDDFFD005DE374 /* APIClient.swift in Sources */,
@@ -347,7 +366,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94DE59181DB4581C00DCF446 /* CarRepositoryTests.swift in Sources */,
+				94DE59181DB4581C00DCF446 /* CarServiceTests.swift in Sources */,
+				941F6B0D1DD8ADA1008CBCD8 /* CarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

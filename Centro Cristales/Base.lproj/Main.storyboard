@@ -37,7 +37,7 @@
                                 </constraints>
                                 <state key="normal" title="ESTADO DE SU VEHÍCULO"/>
                                 <connections>
-                                    <segue destination="4ba-lD-QpI" kind="show" id="gz7-QL-Vvj"/>
+                                    <segue destination="4ba-lD-QpI" kind="show" identifier="requestCarStatus" id="gz7-QL-Vvj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMP-In-lIN">
@@ -136,10 +136,19 @@
                                     <action selector="requestCarStatus:" destination="4ba-lD-QpI" eventType="touchUpInside" id="4ty-zf-7qG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFx-YQ-GSu">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8mB-Ak-dEN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HNA-1E-S9Z" firstAttribute="top" secondItem="mmd-ZA-3Zt" secondAttribute="bottom" constant="-150" id="8Yf-VM-8eF"/>
+                            <constraint firstItem="V71-FI-ytJ" firstAttribute="top" secondItem="PFx-YQ-GSu" secondAttribute="bottom" constant="50" id="9Sd-hU-YG0"/>
                             <constraint firstItem="V71-FI-ytJ" firstAttribute="top" secondItem="HNA-1E-S9Z" secondAttribute="bottom" id="9Vt-xU-a6F"/>
                             <constraint firstItem="9Zy-CX-p4q" firstAttribute="width" secondItem="z8z-hZ-IzP" secondAttribute="width" id="9cy-c0-s3Y"/>
                             <constraint firstItem="ZzD-J8-0Ry" firstAttribute="centerX" secondItem="J8a-Jy-gvR" secondAttribute="centerX" id="Cbb-8V-zSq"/>
@@ -148,6 +157,7 @@
                             <constraint firstItem="z8z-hZ-IzP" firstAttribute="centerX" secondItem="J8a-Jy-gvR" secondAttribute="centerX" id="PQr-sV-XnU"/>
                             <constraint firstItem="aSl-jN-DLJ" firstAttribute="top" secondItem="mmd-ZA-3Zt" secondAttribute="bottom" id="QGQ-yT-xBB"/>
                             <constraint firstItem="aSl-jN-DLJ" firstAttribute="width" secondItem="mmd-ZA-3Zt" secondAttribute="width" multiplier="0.9" id="VEn-FM-IKS"/>
+                            <constraint firstItem="PFx-YQ-GSu" firstAttribute="width" secondItem="ZzD-J8-0Ry" secondAttribute="width" id="ZF7-ck-1WL"/>
                             <constraint firstItem="9Zy-CX-p4q" firstAttribute="centerX" secondItem="J8a-Jy-gvR" secondAttribute="centerX" id="bKT-PH-UnA"/>
                             <constraint firstItem="9Zy-CX-p4q" firstAttribute="top" secondItem="z8z-hZ-IzP" secondAttribute="bottom" constant="20" id="bSh-wD-3c0"/>
                             <constraint firstItem="mmd-ZA-3Zt" firstAttribute="centerX" secondItem="J8a-Jy-gvR" secondAttribute="centerX" id="eLe-m9-DLz"/>
@@ -156,12 +166,14 @@
                             <constraint firstItem="z8z-hZ-IzP" firstAttribute="width" secondItem="aSl-jN-DLJ" secondAttribute="width" id="hYY-dX-CbZ"/>
                             <constraint firstItem="z8z-hZ-IzP" firstAttribute="top" secondItem="aSl-jN-DLJ" secondAttribute="bottom" constant="20" id="kkf-OY-1Oj"/>
                             <constraint firstItem="9Zy-CX-p4q" firstAttribute="height" secondItem="z8z-hZ-IzP" secondAttribute="height" id="p3W-zb-elU"/>
+                            <constraint firstItem="PFx-YQ-GSu" firstAttribute="centerX" secondItem="J8a-Jy-gvR" secondAttribute="centerX" id="q9R-Z4-gV4"/>
                             <constraint firstItem="ZzD-J8-0Ry" firstAttribute="width" secondItem="9Zy-CX-p4q" secondAttribute="width" id="vMl-so-9Bu"/>
                             <constraint firstItem="HNA-1E-S9Z" firstAttribute="leading" secondItem="J8a-Jy-gvR" secondAttribute="leading" id="wHh-oe-t4d"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="badgeTextField" destination="9Zy-CX-p4q" id="12g-WH-zUc"/>
+                        <outlet property="carStatusResultLabel" destination="PFx-YQ-GSu" id="esP-jF-6aW"/>
                         <outlet property="workOrderTextField" destination="z8z-hZ-IzP" id="aMp-mT-7g0"/>
                     </connections>
                 </viewController>
