@@ -24,9 +24,9 @@ enum WorkOrderEndpoint: Endpoint {
         }
     }
     
-    var request: URLRequest {
+    var request: NSMutableURLRequest {
         let url = URL(string: path, relativeTo: baseURL as URL)!
-        let result = URLRequest(url: url)
+        let result = NSMutableURLRequest(url: url)
         return result
     }
 }
@@ -48,7 +48,7 @@ class WorkOrderAPIClient : WorkOrderAPIClientProtocol {
     func fetchCurrentStatus(workOrder: Int, badge: String, completion: @escaping (APIResult<Car>) -> Void){
         let request = WorkOrderEndpoint.Status(workOrder: workOrder, badge: badge).request
         
-        fetch(request: request, parse: { (json) -> Car? in
+        fetch(request: request as URLRequest, parse: { (json) -> Car? in
             //Parse from JSON response to Car
             if let jsonResult = json["resultadoJson"] as? String {
                 if jsonResult != "" {

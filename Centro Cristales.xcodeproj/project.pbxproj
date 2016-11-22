@@ -12,6 +12,10 @@
 		9455775E1DCDFEBB005DE374 /* WorkOrderAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9455775D1DCDFEBB005DE374 /* WorkOrderAPIClient.swift */; };
 		945577611DCE0CCA005DE374 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945577601DCE0CCA005DE374 /* Car.swift */; };
 		945577661DCE929C005DE374 /* WorkOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945577651DCE929C005DE374 /* WorkOrder.swift */; };
+		947B866F1DDE8EB900E72D50 /* MediaPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B866E1DDE8EB900E72D50 /* MediaPickerManager.swift */; };
+		947B86751DE0CE5300E72D50 /* car_image_text_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947B86741DE0CE5300E72D50 /* car_image_text_2.jpg */; };
+		947B86771DE1243000E72D50 /* CarBudgetAPIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B86761DE1243000E72D50 /* CarBudgetAPIClientProtocol.swift */; };
+		947B86791DE1263000E72D50 /* CarBudgetAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B86781DE1263000E72D50 /* CarBudgetAPIClient.swift */; };
 		94B9D57F1DD2B14A00D554E6 /* CarStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9D57E1DD2B14A00D554E6 /* CarStatusController.swift */; };
 		94B9D5811DD2B24D00D554E6 /* CarBudgetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9D5801DD2B24D00D554E6 /* CarBudgetController.swift */; };
 		94B9D5911DD760AA00D554E6 /* WorkOrderAPIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9D5901DD760AA00D554E6 /* WorkOrderAPIClientProtocol.swift */; };
@@ -51,6 +55,10 @@
 		9455775D1DCDFEBB005DE374 /* WorkOrderAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderAPIClient.swift; sourceTree = "<group>"; };
 		945577601DCE0CCA005DE374 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		945577651DCE929C005DE374 /* WorkOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrder.swift; sourceTree = "<group>"; };
+		947B866E1DDE8EB900E72D50 /* MediaPickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerManager.swift; sourceTree = "<group>"; };
+		947B86741DE0CE5300E72D50 /* car_image_text_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car_image_text_2.jpg; sourceTree = "<group>"; };
+		947B86761DE1243000E72D50 /* CarBudgetAPIClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarBudgetAPIClientProtocol.swift; sourceTree = "<group>"; };
+		947B86781DE1263000E72D50 /* CarBudgetAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarBudgetAPIClient.swift; sourceTree = "<group>"; };
 		94B9D57E1DD2B14A00D554E6 /* CarStatusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarStatusController.swift; sourceTree = "<group>"; };
 		94B9D5801DD2B24D00D554E6 /* CarBudgetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarBudgetController.swift; sourceTree = "<group>"; };
 		94B9D5901DD760AA00D554E6 /* WorkOrderAPIClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderAPIClientProtocol.swift; sourceTree = "<group>"; };
@@ -111,8 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				94B9D58F1DD7608900D554E6 /* Protocols */,
-				9455775B1DCDDFFD005DE374 /* APIClient.swift */,
 				9455775D1DCDFEBB005DE374 /* WorkOrderAPIClient.swift */,
+				947B86781DE1263000E72D50 /* CarBudgetAPIClient.swift */,
 			);
 			name = APIClient;
 			sourceTree = "<group>";
@@ -130,6 +138,8 @@
 		94B9D58F1DD7608900D554E6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				9455775B1DCDDFFD005DE374 /* APIClient.swift */,
+				947B86761DE1243000E72D50 /* CarBudgetAPIClientProtocol.swift */,
 				94B9D5901DD760AA00D554E6 /* WorkOrderAPIClientProtocol.swift */,
 			);
 			name = Protocols;
@@ -177,6 +187,7 @@
 				94DE590B1DB4581C00DCF446 /* LaunchScreen.storyboard */,
 				94DE590E1DB4581C00DCF446 /* Info.plist */,
 				94DE59061DB4581C00DCF446 /* Centro_Cristales.xcdatamodeld */,
+				947B866E1DDE8EB900E72D50 /* MediaPickerManager.swift */,
 			);
 			path = "Centro Cristales";
 			sourceTree = "<group>";
@@ -202,6 +213,7 @@
 		94DE59531DCDDC9800DCF446 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				947B86741DE0CE5300E72D50 /* car_image_text_2.jpg */,
 				94DE594F1DC02B2A00DCF446 /* background_image_home.jpg */,
 				94DE59501DC02B2A00DCF446 /* background_image.jpg */,
 			);
@@ -322,6 +334,7 @@
 				94DE590A1DB4581C00DCF446 /* Assets.xcassets in Resources */,
 				94DE59521DC02B2A00DCF446 /* background_image.jpg in Resources */,
 				94DE59511DC02B2A00DCF446 /* background_image_home.jpg in Resources */,
+				947B86751DE0CE5300E72D50 /* car_image_text_2.jpg in Resources */,
 				94DE59051DB4581C00DCF446 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,7 +366,10 @@
 				94B9D5941DD7640500D554E6 /* CarServicing.swift in Sources */,
 				945577661DCE929C005DE374 /* WorkOrder.swift in Sources */,
 				9455775E1DCDFEBB005DE374 /* WorkOrderAPIClient.swift in Sources */,
+				947B86791DE1263000E72D50 /* CarBudgetAPIClient.swift in Sources */,
 				94B9D5961DD764F900D554E6 /* CarService.swift in Sources */,
+				947B866F1DDE8EB900E72D50 /* MediaPickerManager.swift in Sources */,
+				947B86771DE1243000E72D50 /* CarBudgetAPIClientProtocol.swift in Sources */,
 				945577611DCE0CCA005DE374 /* Car.swift in Sources */,
 				94DE59021DB4581C00DCF446 /* ViewController.swift in Sources */,
 				94B9D5811DD2B24D00D554E6 /* CarBudgetController.swift in Sources */,

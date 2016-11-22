@@ -18,7 +18,7 @@ class CarServiceTests: XCTestCase {
     override func setUp() {
         super.setUp()
         let mockAPIClient = MockWorkOrderAPI()
-        carService = CarService(workOrderAPIClient: mockAPIClient)
+        carService = CarService(workOrderAPIClient: mockAPIClient, carBudgetAPIClient: nil)
         
     }
     
@@ -72,7 +72,7 @@ class CarServiceTests: XCTestCase {
         }
     }
     
-    //Test error return
+    
     
     class MockWorkOrderAPI: WorkOrderAPIClientProtocol{
         
@@ -102,6 +102,26 @@ class CarServiceTests: XCTestCase {
                 completion(APIResult.Success(car))
             }
         }
+    }
+    
+    class MockCarBudgetAPI : CarBudgetAPIClientProtocol {
+        let configuration: URLSessionConfiguration
+        lazy var session: URLSession = {
+            return URLSession(configuration: self.configuration)
+        }()
+        
+        init(config: URLSessionConfiguration){
+            self.configuration = config
+        }
+        
+        convenience init(){
+            self.init(config: URLSessionConfiguration.default)
+        }
+        
+        func submitBudgetingRequest(email: String, message: String, image: UIImage?,completion: @escaping (APIResult<Bool>) -> Void) {
+            completion(APIResult.Success(true))
+        }
+        
     }
     
 }

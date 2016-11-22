@@ -27,7 +27,7 @@ protocol JSONDecodable {
 protocol Endpoint {
     var baseURL: URL { get }
     var path: String { get }
-    var request: URLRequest { get }
+    var request: NSMutableURLRequest { get }
 }
 
 protocol APIClient {
@@ -44,7 +44,9 @@ extension APIClient {
         let task = session.dataTask(with: request) { data, response, error in
             
             guard let HTTPResponse = response as? HTTPURLResponse else {
-                completion(nil, nil, error)
+                let userInfo = [ NSLocalizedDescriptionKey: NSLocalizedString("Missing HTTP Response", comment: error.debugDescription) ]
+                let networkError = NSError(domain: TRENetworkingErrorDomain, code: MissingHTTPResponseError, userInfo: userInfo)
+                completion(nil, nil, networkError)
                 return
             }
             

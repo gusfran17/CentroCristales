@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="100" id="4ZQ-jT-NAk"/>
                                     <constraint firstAttribute="width" constant="250" id="KPz-IJ-072"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -48,7 +48,7 @@
                                 </constraints>
                                 <state key="normal" title="COTIZACIÓN / PRESUPUESTO"/>
                                 <connections>
-                                    <segue destination="gd5-5J-aYp" kind="show" id="9ah-kq-Co1"/>
+                                    <segue destination="gd5-5J-aYp" kind="show" identifier="requestCarBudgeting" id="9ah-kq-Co1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version: 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGb-i2-Gp6">
@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="-16"/>
+            <point key="canvasLocation" x="34" y="86"/>
         </scene>
         <!--Car Status Controller-->
         <scene sceneID="yGa-la-f6r">
@@ -101,7 +101,7 @@
                                     <constraint firstAttribute="width" constant="320" id="EeR-aU-7JO"/>
                                     <constraint firstAttribute="height" constant="40" id="ruu-Bq-Zj0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wsb-Qz-SXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="-143.47826086956522"/>
+            <point key="canvasLocation" x="988" y="-253"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zLs-Nc-4uC">
@@ -195,12 +195,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbb-jc-gDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1222" y="145"/>
+            <point key="canvasLocation" x="-844" y="86"/>
         </scene>
         <!--Car Budget Controller-->
         <scene sceneID="Vtu-M7-RuB">
             <objects>
-                <viewController id="gd5-5J-aYp" customClass="CarBudgetController" customModule="Centro_Cristales" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gd5-5J-aYp" customClass="CarBudgetController" customModule="Centro_Cristales" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MJy-Uc-k2w"/>
                         <viewControllerLayoutGuide type="bottom" id="exn-8s-8Iw"/>
@@ -210,11 +210,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vK6-b9-O8v"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione una imagen, un mensaje e indique el mail a donde desea recibir la respuesta" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLU-ru-KVr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presione la imagen para cargar otra:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLU-ru-KVr">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="xDl-h2-vPr"/>
+                                    <constraint firstAttribute="height" constant="30" id="xDl-h2-vPr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -223,7 +223,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Gg1-32-a1J"/>
                                     <constraint firstAttribute="width" constant="340" id="Zbe-s6-Yga"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -233,6 +233,9 @@
                                     <constraint firstAttribute="height" constant="50" id="bK3-UE-LwT"/>
                                 </constraints>
                                 <state key="normal" title="ENVIAR PEDIDO"/>
+                                <connections>
+                                    <action selector="submitCarBudgetingRequest:" destination="gd5-5J-aYp" eventType="touchUpInside" id="FTa-9s-7sU"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escriba aqui su mensaje" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pK-TI-qrZ">
                                 <constraints>
@@ -247,42 +250,53 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_image_text_2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nVa-7P-jge">
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="170" id="otb-1s-ks5"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TJh-mA-aew" firstAttribute="centerX" secondItem="6NZ-sM-cZW" secondAttribute="centerX" id="2LK-hn-h09"/>
                             <constraint firstItem="fLU-ru-KVr" firstAttribute="centerX" secondItem="6NZ-sM-cZW" secondAttribute="centerX" id="7Zq-XA-wyl"/>
                             <constraint firstItem="Sd6-t3-hsT" firstAttribute="top" secondItem="4pK-TI-qrZ" secondAttribute="bottom" constant="20" id="AhB-70-I75"/>
-                            <constraint firstItem="4pK-TI-qrZ" firstAttribute="top" secondItem="fLU-ru-KVr" secondAttribute="bottom" constant="30" id="DWv-DI-cUu"/>
+                            <constraint firstItem="4pK-TI-qrZ" firstAttribute="top" secondItem="nVa-7P-jge" secondAttribute="bottom" constant="20" id="CAh-Tx-fN8"/>
+                            <constraint firstItem="4pK-TI-qrZ" firstAttribute="top" secondItem="fLU-ru-KVr" secondAttribute="bottom" constant="200" id="DWv-DI-cUu"/>
+                            <constraint firstItem="nVa-7P-jge" firstAttribute="width" secondItem="fLU-ru-KVr" secondAttribute="width" constant="10" id="DfA-aA-Po0"/>
                             <constraint firstItem="exn-8s-8Iw" firstAttribute="top" secondItem="vK6-b9-O8v" secondAttribute="bottom" id="Dx8-4Q-dZZ"/>
                             <constraint firstItem="fLU-ru-KVr" firstAttribute="width" secondItem="TJh-mA-aew" secondAttribute="width" multiplier="0.9" id="GYq-LA-wfq"/>
                             <constraint firstItem="Sd6-t3-hsT" firstAttribute="centerX" secondItem="6NZ-sM-cZW" secondAttribute="centerX" id="JFB-Cc-Sdd"/>
                             <constraint firstItem="vK6-b9-O8v" firstAttribute="leading" secondItem="6NZ-sM-cZW" secondAttribute="leading" id="P6G-US-ddo"/>
                             <constraint firstItem="4pK-TI-qrZ" firstAttribute="width" secondItem="fLU-ru-KVr" secondAttribute="width" id="Ut0-Rb-Pgw"/>
-                            <constraint firstItem="vK6-b9-O8v" firstAttribute="top" secondItem="TJh-mA-aew" secondAttribute="bottom" constant="-150" id="VOZ-rq-rx1"/>
+                            <constraint firstItem="vK6-b9-O8v" firstAttribute="top" secondItem="TJh-mA-aew" secondAttribute="bottom" constant="-50" id="VOZ-rq-rx1"/>
+                            <constraint firstItem="nVa-7P-jge" firstAttribute="centerX" secondItem="6NZ-sM-cZW" secondAttribute="centerX" id="Vtp-TY-SAw"/>
                             <constraint firstItem="4pK-TI-qrZ" firstAttribute="centerX" secondItem="6NZ-sM-cZW" secondAttribute="centerX" id="XW7-uU-OLc"/>
+                            <constraint firstItem="nVa-7P-jge" firstAttribute="top" secondItem="fLU-ru-KVr" secondAttribute="bottom" constant="10" id="asa-tT-vbx"/>
                             <constraint firstItem="oKV-9T-BQB" firstAttribute="centerX" secondItem="6NZ-sM-cZW" secondAttribute="centerX" id="ciw-gG-kyj"/>
                             <constraint firstItem="oKV-9T-BQB" firstAttribute="top" secondItem="Sd6-t3-hsT" secondAttribute="bottom" constant="30" id="dSG-Yd-Cay"/>
                             <constraint firstItem="oKV-9T-BQB" firstAttribute="width" secondItem="Sd6-t3-hsT" secondAttribute="width" id="e5F-1i-De8"/>
                             <constraint firstItem="Sd6-t3-hsT" firstAttribute="height" secondItem="4pK-TI-qrZ" secondAttribute="height" id="iwD-7A-LQy"/>
-                            <constraint firstItem="fLU-ru-KVr" firstAttribute="top" secondItem="TJh-mA-aew" secondAttribute="bottom" constant="20" id="l5g-g8-xrq"/>
+                            <constraint firstItem="fLU-ru-KVr" firstAttribute="top" secondItem="TJh-mA-aew" secondAttribute="bottom" id="l5g-g8-xrq"/>
                             <constraint firstItem="vK6-b9-O8v" firstAttribute="top" secondItem="MJy-Uc-k2w" secondAttribute="bottom" id="mIA-8R-mMJ"/>
                             <constraint firstItem="Sd6-t3-hsT" firstAttribute="width" secondItem="4pK-TI-qrZ" secondAttribute="width" id="rPR-JS-Wdh"/>
                             <constraint firstAttribute="trailing" secondItem="vK6-b9-O8v" secondAttribute="trailing" id="w9X-b8-8iI"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="carImageView" destination="nVa-7P-jge" id="BQk-VU-FN7"/>
                         <outlet property="emailTextField" destination="Sd6-t3-hsT" id="cdW-Ke-sTc"/>
                         <outlet property="messageTextField" destination="4pK-TI-qrZ" id="rao-CM-a6a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTv-V4-Wi6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="519"/>
+            <point key="canvasLocation" x="988" y="440"/>
         </scene>
     </scenes>
     <resources>
         <image name="background_image.jpg" width="600" height="857"/>
         <image name="background_image_home.jpg" width="600" height="857"/>
+        <image name="car_image_text_2.jpg" width="1002" height="532"/>
     </resources>
 </document>
