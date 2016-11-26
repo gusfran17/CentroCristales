@@ -227,6 +227,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_image_text_3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nVa-7P-jge">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="otb-1s-ks5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJD-b9-8wh">
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="Rrv-BD-7VX"/>
+                                </constraints>
+                                <state key="normal" title="Escoger Imagen">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getPictureFromLibrary:" destination="gd5-5J-aYp" eventType="touchUpInside" id="hqO-pg-i4h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipz-qm-4iF">
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cámara">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getPictureFromCamera:" destination="gd5-5J-aYp" eventType="touchUpInside" id="kFZ-fC-hSw"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKV-9T-BQB">
                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -250,28 +276,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_image_text_2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nVa-7P-jge">
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="170" id="otb-1s-ks5"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TJh-mA-aew" firstAttribute="centerX" secondItem="6NZ-sM-cZW" secondAttribute="centerX" id="2LK-hn-h09"/>
+                            <constraint firstItem="fJD-b9-8wh" firstAttribute="width" secondItem="Ipz-qm-4iF" secondAttribute="width" id="43i-RX-oIi"/>
                             <constraint firstItem="fLU-ru-KVr" firstAttribute="centerX" secondItem="6NZ-sM-cZW" secondAttribute="centerX" id="7Zq-XA-wyl"/>
                             <constraint firstItem="Sd6-t3-hsT" firstAttribute="top" secondItem="4pK-TI-qrZ" secondAttribute="bottom" constant="20" id="AhB-70-I75"/>
-                            <constraint firstItem="4pK-TI-qrZ" firstAttribute="top" secondItem="nVa-7P-jge" secondAttribute="bottom" constant="20" id="CAh-Tx-fN8"/>
-                            <constraint firstItem="4pK-TI-qrZ" firstAttribute="top" secondItem="fLU-ru-KVr" secondAttribute="bottom" constant="200" id="DWv-DI-cUu"/>
                             <constraint firstItem="nVa-7P-jge" firstAttribute="width" secondItem="fLU-ru-KVr" secondAttribute="width" constant="10" id="DfA-aA-Po0"/>
                             <constraint firstItem="exn-8s-8Iw" firstAttribute="top" secondItem="vK6-b9-O8v" secondAttribute="bottom" id="Dx8-4Q-dZZ"/>
                             <constraint firstItem="fLU-ru-KVr" firstAttribute="width" secondItem="TJh-mA-aew" secondAttribute="width" multiplier="0.9" id="GYq-LA-wfq"/>
                             <constraint firstItem="Sd6-t3-hsT" firstAttribute="centerX" secondItem="6NZ-sM-cZW" secondAttribute="centerX" id="JFB-Cc-Sdd"/>
+                            <constraint firstItem="Ipz-qm-4iF" firstAttribute="trailing" secondItem="nVa-7P-jge" secondAttribute="trailing" id="Laa-fQ-rxD"/>
+                            <constraint firstItem="fJD-b9-8wh" firstAttribute="height" secondItem="4pK-TI-qrZ" secondAttribute="height" id="O3h-y6-YgO"/>
                             <constraint firstItem="vK6-b9-O8v" firstAttribute="leading" secondItem="6NZ-sM-cZW" secondAttribute="leading" id="P6G-US-ddo"/>
+                            <constraint firstItem="4pK-TI-qrZ" firstAttribute="top" secondItem="fJD-b9-8wh" secondAttribute="bottom" constant="20" id="Poy-sE-9F9"/>
                             <constraint firstItem="4pK-TI-qrZ" firstAttribute="width" secondItem="fLU-ru-KVr" secondAttribute="width" id="Ut0-Rb-Pgw"/>
                             <constraint firstItem="vK6-b9-O8v" firstAttribute="top" secondItem="TJh-mA-aew" secondAttribute="bottom" constant="-50" id="VOZ-rq-rx1"/>
                             <constraint firstItem="nVa-7P-jge" firstAttribute="centerX" secondItem="6NZ-sM-cZW" secondAttribute="centerX" id="Vtp-TY-SAw"/>
+                            <constraint firstItem="Ipz-qm-4iF" firstAttribute="top" secondItem="nVa-7P-jge" secondAttribute="bottom" constant="10" id="Vvk-CL-jC7"/>
                             <constraint firstItem="4pK-TI-qrZ" firstAttribute="centerX" secondItem="6NZ-sM-cZW" secondAttribute="centerX" id="XW7-uU-OLc"/>
+                            <constraint firstItem="fJD-b9-8wh" firstAttribute="leading" secondItem="nVa-7P-jge" secondAttribute="leading" id="aGe-VP-3J1"/>
                             <constraint firstItem="nVa-7P-jge" firstAttribute="top" secondItem="fLU-ru-KVr" secondAttribute="bottom" constant="10" id="asa-tT-vbx"/>
                             <constraint firstItem="oKV-9T-BQB" firstAttribute="centerX" secondItem="6NZ-sM-cZW" secondAttribute="centerX" id="ciw-gG-kyj"/>
                             <constraint firstItem="oKV-9T-BQB" firstAttribute="top" secondItem="Sd6-t3-hsT" secondAttribute="bottom" constant="30" id="dSG-Yd-Cay"/>
@@ -281,6 +306,8 @@
                             <constraint firstItem="vK6-b9-O8v" firstAttribute="top" secondItem="MJy-Uc-k2w" secondAttribute="bottom" id="mIA-8R-mMJ"/>
                             <constraint firstItem="Sd6-t3-hsT" firstAttribute="width" secondItem="4pK-TI-qrZ" secondAttribute="width" id="rPR-JS-Wdh"/>
                             <constraint firstAttribute="trailing" secondItem="vK6-b9-O8v" secondAttribute="trailing" id="w9X-b8-8iI"/>
+                            <constraint firstItem="fJD-b9-8wh" firstAttribute="top" secondItem="nVa-7P-jge" secondAttribute="bottom" constant="10" id="x1r-HJ-9LA"/>
+                            <constraint firstItem="Ipz-qm-4iF" firstAttribute="height" secondItem="fJD-b9-8wh" secondAttribute="height" id="zfa-NU-xWy"/>
                         </constraints>
                     </view>
                     <connections>
@@ -291,12 +318,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTv-V4-Wi6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="440"/>
+            <point key="canvasLocation" x="988" y="439.43028485757122"/>
         </scene>
     </scenes>
     <resources>
         <image name="background_image.jpg" width="600" height="857"/>
         <image name="background_image_home.jpg" width="600" height="857"/>
-        <image name="car_image_text_2.jpg" width="1002" height="532"/>
+        <image name="car_image_text_3.jpg" width="800" height="489"/>
     </resources>
 </document>

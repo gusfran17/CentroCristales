@@ -35,7 +35,8 @@ class MediaPickerManager: NSObject {
         imagePickerController.mediaTypes = [kUTTypeImage as String]
     }
     
-    func presentImagePickerController(animated: Bool) {
+    func presentImagePickerController(animated: Bool, imageType: UIImagePickerControllerSourceType) {
+        imagePickerController.sourceType = imageType
         presentingViewController.present(imagePickerController, animated: animated, completion: nil)
     }
     

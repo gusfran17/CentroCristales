@@ -34,7 +34,26 @@ class CarBudgetController: UIViewController {
     }
     
     @objc func tapDetected(){
-        mediaPickerManager.presentImagePickerController(animated: true)
+        let newImageView = UIImageView(image: carImageView.image)
+        newImageView.frame = self.view.frame
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CarBudgetController.dismissFullScreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+    }
+    
+    @objc func dismissFullScreenImage(sender: UITapGestureRecognizer) {
+        sender.view?.removeFromSuperview()
+    }
+    
+    @IBAction func getPictureFromLibrary(_ sender: AnyObject) {
+        mediaPickerManager.presentImagePickerController(animated: true, imageType: .photoLibrary)
+    }
+    
+    @IBAction func getPictureFromCamera(_ sender: AnyObject) {
+        mediaPickerManager.presentImagePickerController(animated: true, imageType: .camera)
     }
     
     func showAlert(message: String){
