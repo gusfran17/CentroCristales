@@ -50,18 +50,23 @@ class CarStatusController: UIViewController {
             }
             showAlert(message: message)
         } else {
-            carService?.getCarByBadgeAndWorkOrder(for: badge!, workOrder: workOrderId!){ result in
+            carService?.getCarByBadgeAndWorkOrder(for: badge!.uppercased(), workOrder: workOrderId!){ result in
                 switch result {
                 case .Success(let car):
-                    switch car.workOrder.status {
-                    case .Finalized(_):
-                        self.carStatusResultLabel.text = labelMessage + "TERMINADO"
-                    case .InGarage(_):
-                        self.carStatusResultLabel.text = labelMessage + "EN TALLER"
-                    case .Passed(_):
-                        self.carStatusResultLabel.text = labelMessage + "TERMINADO"
-                    case .NotFound(_):
-                        self.carStatusResultLabel.text = "Vehículo NO ENCONTRADO"
+                    guard let workOrder = car.workOrder,
+                          let status = workOrder.status else {
+                        self.showAlert(message: "Ha habido un problema, por favor intente mas tarde.")
+                        return
+                    }
+                    switch status {
+                            case .Finalized(_):
+                                self.carStatusResultLabel.text = labelMessage + "TERMINADO"
+                            case .InGarage(_):
+                                self.carStatusResultLabel.text = labelMessage + "EN TALLER"
+                            case .Passed(_):
+                                self.carStatusResultLabel.text = labelMessage + "TERMINADO"
+                            case .NotFound(_):
+                                self.carStatusResultLabel.text = "Vehículo NO ENCONTRADO"
                     }
                 case .Failure(let error):
                     print(error)

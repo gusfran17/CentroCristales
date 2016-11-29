@@ -9,5 +9,5 @@
 import Foundation
 
 protocol WorkOrderAPIClientProtocol: APIClient {
-    func fetchCurrentStatus(workOrder: Int, badge: String, completion: @escaping (APIResult<Car>) -> Void) -> Void
+    func fetchCurrentStatus(badge: String, workOrder: Int, completion: @escaping (APIResult<Car>) -> Void) -> Void
 }

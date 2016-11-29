@@ -109,6 +109,8 @@ class CarBudgetController: UIViewController {
 
 extension CarBudgetController: MediaPickerManagerDelegate {
     func mediaPickerManager(manager: MediaPickerManager, didFinishPickingImage image: UIImage) {
+        carImageView.contentMode = .scaleAspectFit
+        carImageView.backgroundColor = .black
         carImageView.image = image
         photoUploaded = true
     }

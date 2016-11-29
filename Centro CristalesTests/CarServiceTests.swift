@@ -118,7 +118,7 @@ class CarServiceTests: XCTestCase {
             self.init(config: URLSessionConfiguration.default)
         }
         
-        func submitBudgetingRequest(email: String, message: String, image: UIImage?,completion: @escaping (APIResult<Bool>) -> Void) {
+        func submitBudgetingRequest(for email: String, message: String, image: UIImage?,completion: @escaping (APIResult<Bool>) -> Void) {
             completion(APIResult.Success(true))
         }
         

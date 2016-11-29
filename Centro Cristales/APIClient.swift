@@ -21,7 +21,7 @@ enum APIResult<T> {
 }
 
 protocol JSONDecodable {
-    init?(JSON: [String: AnyObject], badge: String)
+    init?(JSON: [String: AnyObject])
 }
 
 protocol Endpoint {

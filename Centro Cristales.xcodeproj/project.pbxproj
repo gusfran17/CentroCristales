@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29AE7F95AD550DEAC74FA1CA /* Pods_Centro_Cristales.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4783EDB01D117D7FB77B3DA /* Pods_Centro_Cristales.framework */; };
+		6E4E7064277F4C743EFA8158 /* Pods_Centro_CristalesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2EA8EC0E48D181B2431C3F /* Pods_Centro_CristalesTests.framework */; };
 		941F6B0D1DD8ADA1008CBCD8 /* CarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F6B0C1DD8ADA1008CBCD8 /* CarTests.swift */; };
 		9455775C1DCDDFFD005DE374 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9455775B1DCDDFFD005DE374 /* APIClient.swift */; };
 		9455775E1DCDFEBB005DE374 /* WorkOrderAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9455775D1DCDFEBB005DE374 /* WorkOrderAPIClient.swift */; };
@@ -31,6 +33,7 @@
 		94DE59181DB4581C00DCF446 /* CarServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE59171DB4581C00DCF446 /* CarServiceTests.swift */; };
 		94DE59511DC02B2A00DCF446 /* background_image_home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94DE594F1DC02B2A00DCF446 /* background_image_home.jpg */; };
 		94DE59521DC02B2A00DCF446 /* background_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94DE59501DC02B2A00DCF446 /* background_image.jpg */; };
+		D4D23093AE8DE44A6C44E28D /* Pods_Centro_CristalesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB2127071D9F80A376E8D95 /* Pods_Centro_CristalesUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B2EA8EC0E48D181B2431C3F /* Pods_Centro_CristalesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Centro_CristalesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		345A1983FC5D33E787EA5E98 /* Pods-Centro Cristales.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Centro Cristales.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Centro Cristales/Pods-Centro Cristales.debug.xcconfig"; sourceTree = "<group>"; };
+		456417E0DAE0C4FF83578731 /* Pods-Centro Cristales.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Centro Cristales.release.xcconfig"; path = "Pods/Target Support Files/Pods-Centro Cristales/Pods-Centro Cristales.release.xcconfig"; sourceTree = "<group>"; };
+		5FAD1EE3E94A283321322DC4 /* Pods-Centro CristalesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Centro CristalesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Centro CristalesUITests/Pods-Centro CristalesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6CB2127071D9F80A376E8D95 /* Pods_Centro_CristalesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Centro_CristalesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BECD5858A8333728C6A4AC4 /* Pods-Centro CristalesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Centro CristalesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Centro CristalesTests/Pods-Centro CristalesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		941F6B0C1DD8ADA1008CBCD8 /* CarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTests.swift; sourceTree = "<group>"; };
 		9455775B1DCDDFFD005DE374 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		9455775D1DCDFEBB005DE374 /* WorkOrderAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderAPIClient.swift; sourceTree = "<group>"; };
@@ -80,6 +89,9 @@
 		94DE591E1DB4581C00DCF446 /* Centro CristalesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Centro CristalesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DE594F1DC02B2A00DCF446 /* background_image_home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_image_home.jpg; sourceTree = "<group>"; };
 		94DE59501DC02B2A00DCF446 /* background_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_image.jpg; sourceTree = "<group>"; };
+		BA39C3F1DAE91D6DA130653F /* Pods-Centro CristalesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Centro CristalesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Centro CristalesTests/Pods-Centro CristalesTests.release.xcconfig"; sourceTree = "<group>"; };
+		F4783EDB01D117D7FB77B3DA /* Pods_Centro_Cristales.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Centro_Cristales.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDF47B71B2B240B7DE61B031 /* Pods-Centro CristalesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Centro CristalesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Centro CristalesUITests/Pods-Centro CristalesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29AE7F95AD550DEAC74FA1CA /* Pods_Centro_Cristales.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E4E7064277F4C743EFA8158 /* Pods_Centro_CristalesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,12 +115,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D23093AE8DE44A6C44E28D /* Pods_Centro_CristalesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18C57CA26838BDFE247716E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				345A1983FC5D33E787EA5E98 /* Pods-Centro Cristales.debug.xcconfig */,
+				456417E0DAE0C4FF83578731 /* Pods-Centro Cristales.release.xcconfig */,
+				7BECD5858A8333728C6A4AC4 /* Pods-Centro CristalesTests.debug.xcconfig */,
+				BA39C3F1DAE91D6DA130653F /* Pods-Centro CristalesTests.release.xcconfig */,
+				FDF47B71B2B240B7DE61B031 /* Pods-Centro CristalesUITests.debug.xcconfig */,
+				5FAD1EE3E94A283321322DC4 /* Pods-Centro CristalesUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		941F6B0E1DD8CB07008CBCD8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				94B9D58F1DD7608900D554E6 /* Protocols */,
-				9455775D1DCDFEBB005DE374 /* WorkOrderAPIClient.swift */,
 				947B86781DE1263000E72D50 /* CarBudgetAPIClient.swift */,
+				9455775D1DCDFEBB005DE374 /* WorkOrderAPIClient.swift */,
 			);
 			name = APIClient;
 			sourceTree = "<group>";
@@ -162,6 +190,8 @@
 				94DE58FE1DB4581C00DCF446 /* Centro Cristales */,
 				94DE59161DB4581C00DCF446 /* Centro CristalesTests */,
 				94DE58FD1DB4581C00DCF446 /* Products */,
+				18C57CA26838BDFE247716E6 /* Pods */,
+				DA91EF1B3EC93A02DF18A535 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,6 +253,16 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		DA91EF1B3EC93A02DF18A535 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4783EDB01D117D7FB77B3DA /* Pods_Centro_Cristales.framework */,
+				0B2EA8EC0E48D181B2431C3F /* Pods_Centro_CristalesTests.framework */,
+				6CB2127071D9F80A376E8D95 /* Pods_Centro_CristalesUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,9 +270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94DE59271DB4581C00DCF446 /* Build configuration list for PBXNativeTarget "Centro Cristales" */;
 			buildPhases = (
+				CDA6E269797E0A87361FF696 /* [CP] Check Pods Manifest.lock */,
 				94DE58F81DB4581B00DCF446 /* Sources */,
 				94DE58F91DB4581B00DCF446 /* Frameworks */,
 				94DE58FA1DB4581B00DCF446 /* Resources */,
+				93694CDBE8708502D18C9996 /* [CP] Embed Pods Frameworks */,
+				E03FAD1109D1AF0692646A15 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,9 +290,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94DE592A1DB4581C00DCF446 /* Build configuration list for PBXNativeTarget "Centro CristalesTests" */;
 			buildPhases = (
+				B09F9DDE494319E74A131D4B /* [CP] Check Pods Manifest.lock */,
 				94DE590F1DB4581C00DCF446 /* Sources */,
 				94DE59101DB4581C00DCF446 /* Frameworks */,
 				94DE59111DB4581C00DCF446 /* Resources */,
+				B7E426A06443BA8D5D98682A /* [CP] Embed Pods Frameworks */,
+				ADB242D25918B1752D4D76DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,9 +311,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94DE592D1DB4581C00DCF446 /* Build configuration list for PBXNativeTarget "Centro CristalesUITests" */;
 			buildPhases = (
+				2CAE38C828960331446DD0BE /* [CP] Check Pods Manifest.lock */,
 				94DE591A1DB4581C00DCF446 /* Sources */,
 				94DE591B1DB4581C00DCF446 /* Frameworks */,
 				94DE591C1DB4581C00DCF446 /* Resources */,
+				7E949F0F14449686EA1139CA /* [CP] Embed Pods Frameworks */,
+				D4D8B424ACB3A26F46743A9F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,7 +340,7 @@
 				TargetAttributes = {
 					94DE58FB1DB4581B00DCF446 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = LQRYUWUP72;
+						DevelopmentTeam = VY6V83V64T;
 						ProvisioningStyle = Automatic;
 					};
 					94DE59121DB4581C00DCF446 = {
@@ -358,6 +407,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CAE38C828960331446DD0BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E949F0F14449686EA1139CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Centro CristalesUITests/Pods-Centro CristalesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93694CDBE8708502D18C9996 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Centro Cristales/Pods-Centro Cristales-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADB242D25918B1752D4D76DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Centro CristalesTests/Pods-Centro CristalesTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B09F9DDE494319E74A131D4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B7E426A06443BA8D5D98682A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Centro CristalesTests/Pods-Centro CristalesTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDA6E269797E0A87361FF696 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D4D8B424ACB3A26F46743A9F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Centro CristalesUITests/Pods-Centro CristalesUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E03FAD1109D1AF0692646A15 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Centro Cristales/Pods-Centro Cristales-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		94DE58F81DB4581B00DCF446 /* Sources */ = {
@@ -530,32 +717,39 @@
 		};
 		94DE59281DB4581C00DCF446 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 345A1983FC5D33E787EA5E98 /* Pods-Centro Cristales.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LQRYUWUP72;
+				DEVELOPMENT_TEAM = VY6V83V64T;
 				INFOPLIST_FILE = "Centro Cristales/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "CC.Centro-Cristales";
+				PRODUCT_BUNDLE_IDENTIFIER = com.centrocristales.CentroCrApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		94DE59291DB4581C00DCF446 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 456417E0DAE0C4FF83578731 /* Pods-Centro Cristales.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LQRYUWUP72;
+				DEVELOPMENT_TEAM = VY6V83V64T;
 				INFOPLIST_FILE = "Centro Cristales/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "CC.Centro-Cristales";
+				PRODUCT_BUNDLE_IDENTIFIER = com.centrocristales.CentroCrApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		94DE592B1DB4581C00DCF446 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BECD5858A8333728C6A4AC4 /* Pods-Centro CristalesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -571,6 +765,7 @@
 		};
 		94DE592C1DB4581C00DCF446 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA39C3F1DAE91D6DA130653F /* Pods-Centro CristalesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -586,6 +781,7 @@
 		};
 		94DE592E1DB4581C00DCF446 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDF47B71B2B240B7DE61B031 /* Pods-Centro CristalesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = LQRYUWUP72;
@@ -600,6 +796,7 @@
 		};
 		94DE592F1DB4581C00DCF446 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FAD1EE3E94A283321322DC4 /* Pods-Centro CristalesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = LQRYUWUP72;

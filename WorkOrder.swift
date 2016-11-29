@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ObjectMapper
 
 enum Status{
     case InGarage(String)
@@ -28,8 +29,31 @@ enum Status{
     }
 }
 
-struct WorkOrder{
-    let id: Int
-    let remarks: String
-    let status: Status
+struct WorkOrder: Mappable{
+    var id: Int?
+    var remarks: String?
+    var status: Status?
+    
+    init?(map: Map) {
+        
+    }
+    
+    init(id: Int, remarks: String, status: Status){
+        self.id = id
+        self.remarks = remarks
+        self.status = status
+    }
+    
+    mutating func mapping(map: Map) {
+        id    <- map["id_presupuesto"]
+        remarks <- map["observaciones"]
+        guard let status = map["id_estado"].currentValue as! String?,
+            let statusDesc = map["descripcionEstado"].currentValue as! String?
+            else {
+                return
+        }
+        self.status = Status(rawValue: status, remark: statusDesc)
+    }
 }
+
+

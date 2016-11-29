@@ -45,7 +45,7 @@ class WorkOrderAPIClient : WorkOrderAPIClientProtocol {
         self.init(config: URLSessionConfiguration.default)
     }
     
-    func fetchCurrentStatus(workOrder: Int, badge: String, completion: @escaping (APIResult<Car>) -> Void){
+    func fetchCurrentStatus(badge: String, workOrder: Int, completion: @escaping (APIResult<Car>) -> Void){
         let request = WorkOrderEndpoint.Status(workOrder: workOrder, badge: badge).request
         
         fetch(request: request as URLRequest, parse: { (json) -> Car? in
@@ -54,8 +54,9 @@ class WorkOrderAPIClient : WorkOrderAPIClientProtocol {
                 if jsonResult != "" {
                     let data = (jsonResult.data(using: String.Encoding.utf8)! as Data) as Data
                     do {
-                        if let anyObj = try JSONSerialization.jsonObject(with: data, options: []) as? [[String : AnyObject]] {
-                            let car = Car(JSON: anyObj[0], badge: badge)
+                        if var anyObj = try JSONSerialization.jsonObject(with: data, options: []) as? [[String : AnyObject]] {
+                            anyObj[0]["dominio"] = badge as AnyObject?
+                            let car = Car(JSON: anyObj[0])
                             return car
                         }
                     } catch (let error){

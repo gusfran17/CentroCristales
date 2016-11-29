@@ -7,29 +7,27 @@
 //
 
 import Foundation
+import ObjectMapper
 
 
-
-struct Car {
-    let badge: String
-    let workOrder: WorkOrder
+struct Car: Mappable {
+    var badge: String?
+    var workOrder: WorkOrder?
+    
     init(badge: String, workOrder: WorkOrder){
         self.badge = badge
         self.workOrder = workOrder
     }
-}
-
-extension Car: JSONDecodable {
-    init?(JSON: [String: AnyObject], badge: String) {
-        guard let workOrderId = JSON["id_presupuesto"] as? Int,
-            let status = JSON["id_estado"] as? String,
-            let statusDesc = JSON["descripcionEstado"] as? String,
-            let remarks = JSON["observaciones"] as? String else {
-                return nil
-        }
-        let statusEnum = Status(rawValue: status, remark: statusDesc)
-        let workOrder = WorkOrder(id: workOrderId, remarks: remarks, status: statusEnum)
-        self.badge = badge
-        self.workOrder = workOrder
+    
+    init?(map: Map) {
+        
+    }
+    
+    // Mappable
+    mutating func mapping(map: Map) {
+        badge    <- map["dominio"]
+        workOrder = WorkOrder(JSON: map.JSON)
     }
 }
+
+

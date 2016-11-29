@@ -20,7 +20,7 @@ class CarService: CarServicing {
     }
     
     public func getCarByBadgeAndWorkOrder(for badge: String, workOrder: Int, completion: @escaping (APIResult<Car>) -> Void) {
-        workOrderAPIClient?.fetchCurrentStatus(workOrder: workOrder, badge: badge){ result in
+        workOrderAPIClient?.fetchCurrentStatus(badge: badge, workOrder: workOrder){ result in
             switch result {
             case .Success(let car):
                 completion(APIResult.Success(car))
