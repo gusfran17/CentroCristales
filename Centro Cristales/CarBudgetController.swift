@@ -8,10 +8,11 @@
 
 import UIKit
 
-class CarBudgetController: UIViewController {
+class CarBudgetController: UIViewController, UITextFieldDelegate {
 
     var photoUploaded: Bool = false
     var carService: CarService?
+    @IBOutlet weak var topVerticalSpacingConstraint: NSLayoutConstraint!
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var carImageView: UIImageView!
@@ -27,6 +28,22 @@ class CarBudgetController: UIViewController {
         singleTap.numberOfTapsRequired = 1
         carImageView.isUserInteractionEnabled = true
         carImageView.addGestureRecognizer(singleTap)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(CarBudgetController.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CarBudgetController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CarBudgetController.dismissKeyboard))
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,8 +73,8 @@ class CarBudgetController: UIViewController {
         mediaPickerManager.presentImagePickerController(animated: true, imageType: .camera)
     }
     
-    func showAlert(message: String){
-        let alertController = UIAlertController(title: "Datos Incorrectos", message:
+    func showAlert(title: String, message: String){
+        let alertController = UIAlertController(title: title, message:
             message, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
         
@@ -82,21 +99,65 @@ class CarBudgetController: UIViewController {
                 message = "El email es incorrecto"
             }
             if !photoUploaded {
-                message = "Debe cargar una foto del auto a presupuestar"
+                message = "Debe cargar una foto del vehículo a presupuestar"
             }
-            showAlert(message: message)
+            showAlert(title:"Datos incorrectos", message: message)
         } else {
-            self.carService?.submitCarBudgetingRequest(for: email!, message: messageToSend!, image: carImageView.image!, completion: { result in
-                switch result {
-                case .Success(_):
-                    self.showAlert(message: "Los datos fueron enviados exitosamente")
-                case .Failure(let error):
-                    print(error)
-                    self.showAlert(message: "Hubo un error al enviar los datos. Por favor intente de nuevo, y si persiste comuniquese con el administrador")
-                }
-                
-            })
+            let alertController = UIAlertController(title: "Atención", message:
+                "Esta a punto de enviar la foto de su vehículo con su respectiva descripción. Una vez recibidos estos datos se le enviará un mail con la cotizacion a \(email!)", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: {(alert: UIAlertAction!) in self.sendValuationRequest(to: email!, messageToSend: messageToSend!)}))
+            alertController.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    private func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
+        if image.size.width > newWidth {
+            let scale = newWidth / image.size.width
+            let newHeight = image.size.height * scale
+            UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+            image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+            let newImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return newImage!
+        }
+        return image
+    }
+    
+    private func sendValuationRequest(to email: String, messageToSend: String){
+        showLoadingActivity()
+        let resizeImage = self.resizeImage(image: carImageView.image!, newWidth: 1200)
+        self.carService?.submitCarBudgetingRequest(for: email, message: messageToSend, image: resizeImage, completion: { result in
+            switch result {
+            case .Success(_):
+                self.dismissLoadingActivity()
+                self.showAlert(title:"", message: "Los datos fueron enviados exitosamente")
+            case .Failure(let error):
+                print(error)
+                self.dismissLoadingActivity()
+                self.showAlert(title:"Error", message: "Hubo un error al enviar los datos. Por favor intente de nuevo, y si persiste comuniquese con el administrador")
+            }
+            
+        })
+    }
+    
+    private func showLoadingActivity(){
+        let alert = UIAlertController(title: nil, message: "Espere mientras se envian los datos...", preferredStyle: .alert)
+        alert.view.tintColor = UIColor.black
+        let loadingIndicator = UIActivityIndicatorView(frame: alert.view.bounds)
+        loadingIndicator.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        //Add the activity indicator to the alert's view
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func dismissLoadingActivity(){
+        dismiss(animated: false, completion: nil)
     }
     
     private func isValidEmail(testStr:String) -> Bool {
@@ -105,6 +166,29 @@ class CarBudgetController: UIViewController {
         return emailTest.evaluate(with: testStr)
     }
     
+    func keyboardWillShow(notification: NSNotification) {
+        if let userInfoDict = notification.userInfo,
+           let keyboardFrameValue = userInfoDict[UIKeyboardFrameEndUserInfoKey] as? NSValue{
+            let keyboardFrame = keyboardFrameValue.cgRectValue
+            UIView.animate(withDuration: 0.8){
+                self.topVerticalSpacingConstraint.constant = keyboardFrame.size.height - 150
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        UIView.animate(withDuration: 0.8){
+            self.topVerticalSpacingConstraint.constant = -50
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    // MARK UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
 extension CarBudgetController: MediaPickerManagerDelegate {

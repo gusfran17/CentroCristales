@@ -34,7 +34,7 @@ class CarServiceTests: XCTestCase {
             switch result {
             case .Success(let car):
                 XCTAssertEqual(car.badge, badge)
-                XCTAssertEqual(car.workOrder.id, workOrderId)
+                XCTAssertEqual(car.workOrder?.id, workOrderId)
             default:
                 XCTFail()
             }
@@ -47,7 +47,13 @@ class CarServiceTests: XCTestCase {
         carService?.getCarByBadgeAndWorkOrder(for: badge, workOrder: workOrderId) { result in
             switch result {
             case .Success(let car):
-                switch car.workOrder.status {
+                guard let workOrder = car.workOrder,
+                      let status = workOrder.status
+                    else {
+                        XCTFail("Car has no work order in it")
+                        return
+                }
+                switch status {
                 case .Passed(let message):
                     XCTAssertEqual(message, "PASADO")
                 default:
@@ -90,7 +96,7 @@ class CarServiceTests: XCTestCase {
         }
 
         
-        func fetchCurrentStatus(workOrder: Int, badge: String, completion: @escaping (APIResult<Car>) -> Void) {
+        func fetchCurrentStatus(badge: String, workOrder: Int, completion: @escaping (APIResult<Car>) -> Void) {
             if badge == "AAAAAA" {
                 let error = NSError(domain: TRETestingErrorDomain, code: TestingError, userInfo: nil)
                 completion(APIResult.Failure(error))

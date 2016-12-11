@@ -4,10 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Centro Cristales.xcscheme</key>
+		<key>Centro Cristales.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>Copy of Centro Cristales.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

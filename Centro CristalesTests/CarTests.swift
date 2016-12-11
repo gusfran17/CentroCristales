@@ -31,10 +31,11 @@ class CarTests: XCTestCase {
     func testCar_Should_Be_Created_From_JSON() {
         let data = (jsonResult.data(using: String.Encoding.utf8)! as Data) as Data
         do {
-            if let anyObj = try JSONSerialization.jsonObject(with: data, options: []) as? [String : AnyObject] {
-                let car = Car(JSON: anyObj, badge: "HNZ114")
+            if var anyObj = try JSONSerialization.jsonObject(with: data, options: []) as? [String : AnyObject] {
+                anyObj["dominio"] = "HNZ114" as AnyObject?
+                let car = Car(JSON: anyObj)
                 XCTAssertEqual(car?.badge, "HNZ114")
-                XCTAssertEqual(car?.workOrder.id, 188972)
+                XCTAssertEqual(car?.workOrder?.id, 188972)
             }
         } catch (let error){
             print(error)
@@ -45,9 +46,16 @@ class CarTests: XCTestCase {
     func testCar_Should_Be_Created_From_JSON_With_Status_Passed() {
         let data = (jsonResult.data(using: String.Encoding.utf8)! as Data) as Data
         do {
-            if let anyObj = try JSONSerialization.jsonObject(with: data, options: []) as? [String : AnyObject] {
-                if let car = Car(JSON: anyObj, badge: "HNZ114") {
-                    switch car.workOrder.status {
+            if var anyObj = try JSONSerialization.jsonObject(with: data, options: []) as? [String : AnyObject] {
+                anyObj["dominio"] = "HNZ114" as AnyObject?
+                if let car = Car(JSON: anyObj) {
+                    guard let workOrder = car.workOrder,
+                          let status = workOrder.status
+                        else {
+                            XCTFail("Car has no work order in it")
+                            return
+                    }
+                    switch status {
                     case .Passed(let message):
                             XCTAssertEqual(message, "PASADO")
                     default:
