@@ -13,6 +13,7 @@
 		9432FEAA1DFC3F6D00E32BE7 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9432FEA91DFC3F6D00E32BE7 /* ObjectMapper.framework */; };
 		9432FEAF1DFCD68000E32BE7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9432FEAD1DFCD68000E32BE7 /* Info.plist */; };
 		9432FEB21DFCD6E700E32BE7 /* CarValuationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432FEB11DFCD6E700E32BE7 /* CarValuationTest.swift */; };
+		9432FEB41DFD67AB00E32BE7 /* CarStatusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432FEB31DFD67AB00E32BE7 /* CarStatusTest.swift */; };
 		9455775C1DCDDFFD005DE374 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9455775B1DCDDFFD005DE374 /* APIClient.swift */; };
 		9455775E1DCDFEBB005DE374 /* WorkOrderAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9455775D1DCDFEBB005DE374 /* WorkOrderAPIClient.swift */; };
 		945577611DCE0CCA005DE374 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945577601DCE0CCA005DE374 /* Car.swift */; };
@@ -70,6 +71,7 @@
 		9432FEAD1DFCD68000E32BE7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9432FEB01DFCD6E700E32BE7 /* Centro CristalesUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Centro CristalesUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		9432FEB11DFCD6E700E32BE7 /* CarValuationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarValuationTest.swift; sourceTree = "<group>"; };
+		9432FEB31DFD67AB00E32BE7 /* CarStatusTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarStatusTest.swift; sourceTree = "<group>"; };
 		9455775B1DCDDFFD005DE374 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		9455775D1DCDFEBB005DE374 /* WorkOrderAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderAPIClient.swift; sourceTree = "<group>"; };
 		945577601DCE0CCA005DE374 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				9432FEAD1DFCD68000E32BE7 /* Info.plist */,
 				9432FEB11DFCD6E700E32BE7 /* CarValuationTest.swift */,
 				9432FEB01DFCD6E700E32BE7 /* Centro CristalesUITests-Bridging-Header.h */,
+				9432FEB31DFD67AB00E32BE7 /* CarStatusTest.swift */,
 			);
 			path = "Centro CristalesUITests";
 			sourceTree = SOURCE_ROOT;
@@ -612,6 +615,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9432FEB41DFD67AB00E32BE7 /* CarStatusTest.swift in Sources */,
 				9432FEB21DFCD6E700E32BE7 /* CarValuationTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

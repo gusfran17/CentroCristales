@@ -28,31 +28,41 @@ class CarValuationTest: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testMesssageFieldRequired() {
+        let app = XCUIApplication()
+        app.buttons["COTIZACIÓN / PRESUPUESTO"].tap()
+        app.buttons["ENVIAR PEDIDO"].tap()
+        XCTAssert(app.alerts["Datos incorrectos"].exists)
+    }
+    
+    func testEmailFieldRequired(){
         
         let app = XCUIApplication()
         app.buttons["COTIZACIÓN / PRESUPUESTO"].tap()
-        app.buttons["Escoger Imagen"].tap()
-        app.alerts["“Centro Cristales” Would Like to Access Your Photos"].buttons["OK"].tap()
-        app.collectionViews["PhotosGridView"].cells["Photo, Landscape, August 08, 2012, 7:52 PM"].tap()
         
         let escribaAquiSuMensajeTextField = app.textFields["Escriba aqui su mensaje"]
         escribaAquiSuMensajeTextField.tap()
-        escribaAquiSuMensajeTextField.typeText("tes")
+
+        escribaAquiSuMensajeTextField.typeText("test")
+        app.buttons["ENVIAR PEDIDO"].tap()
+        XCTAssert(app.alerts["Datos incorrectos"].exists)
+    }
+    
+    func testEmailFormatIsIncorrect(){
+        
+        let app = XCUIApplication()
+        app.buttons["COTIZACIÓN / PRESUPUESTO"].tap()
+        
+        let escribaAquiSuMensajeTextField = app.textFields["Escriba aqui su mensaje"]
+        escribaAquiSuMensajeTextField.tap()
+        escribaAquiSuMensajeTextField.typeText("test")
         
         let emailDeRespuestaTextField = app.textFields["Email de respuesta"]
-        emailDeRespuestaTextField.typeText("t")
-        app.otherElements.containing(.navigationBar, identifier:"Centro_Cristales.CarBudget").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .image).element(boundBy: 1).tap()
         emailDeRespuestaTextField.tap()
         emailDeRespuestaTextField.typeText("test")
-        emailDeRespuestaTextField.typeText("@")
-        emailDeRespuestaTextField.typeText("test.")
-        app.typeText("com")
-        app.otherElements.containing(.alert, identifier:"Atención").element.tap()
-        app.alerts.buttons["OK"].tap()
+        app.buttons["ENVIAR PEDIDO"].tap()
+        XCTAssert(app.alerts["Datos incorrectos"].exists)
         
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
 }
