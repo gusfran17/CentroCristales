@@ -13,7 +13,8 @@ class CarBudgetController: UIViewController, UITextFieldDelegate {
     var photoUploaded: Bool = false
     var carService: CarService?
     @IBOutlet weak var topVerticalSpacingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var messageTextField: UITextField!
+
+    @IBOutlet weak var messageTextField: UITextView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var carImageView: UIImageView!
     lazy var mediaPickerManager: MediaPickerManager = {
@@ -24,6 +25,9 @@ class CarBudgetController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.messageTextField.layer.borderWidth = 0.5
+        self.messageTextField.layer.borderColor = UIColor.lightGray.cgColor
+        self.messageTextField.layer.cornerRadius = 6
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(CarBudgetController.tapDetected))
         singleTap.numberOfTapsRequired = 1
         carImageView.isUserInteractionEnabled = true
@@ -171,7 +175,7 @@ class CarBudgetController: UIViewController, UITextFieldDelegate {
            let keyboardFrameValue = userInfoDict[UIKeyboardFrameEndUserInfoKey] as? NSValue{
             let keyboardFrame = keyboardFrameValue.cgRectValue
             UIView.animate(withDuration: 0.8){
-                self.topVerticalSpacingConstraint.constant = keyboardFrame.size.height - 150
+                self.topVerticalSpacingConstraint.constant = keyboardFrame.size.height - 70
                 self.view.layoutIfNeeded()
             }
         }

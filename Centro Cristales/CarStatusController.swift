@@ -100,11 +100,11 @@ class CarStatusController: UIViewController, UITextFieldDelegate {
                     case .Finalized(_):
                         self.dismissLoadingActivity(message: labelMessage + "TERMINADO")
                     case .InGarage(_):
-                        self.dismissLoadingActivity(message: labelMessage + "TERMINADO")
+                        self.dismissLoadingActivity(message: labelMessage + "EN TALLER")
                     case .Passed(_):
                         self.dismissLoadingActivity(message: labelMessage + "TERMINADO")
                     case .NotFound(_):
-                        self.dismissLoadingActivity(message: labelMessage + "TERMINADO")
+                        self.dismissLoadingActivity(message: "NO SE HA ENCONTRADO LA ORDEN DE TRABAJO INGRESADA")
                     }
                 case .Failure(let error):
                     print(error)
@@ -116,7 +116,7 @@ class CarStatusController: UIViewController, UITextFieldDelegate {
     
     func keyboardWillShow(notification: NSNotification) {
         UIView.animate(withDuration: 0.8){
-            self.topVerticalSpacingConstraint.constant = -100
+            self.topVerticalSpacingConstraint.constant = -60
             self.view.layoutIfNeeded()
         }
     }
