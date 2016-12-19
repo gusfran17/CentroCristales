@@ -15,8 +15,11 @@ class CarStatusController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var badgeTextField: UITextField!
     @IBOutlet weak var carStatusResultLabel: UILabel!
     @IBOutlet weak var topVerticalSpacingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bannerImage: UIImageView!
+    var bannerLink: String? = AdvertLink.link
     
     var carService: CarService?
+    var advertService: AdvertService?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +27,33 @@ class CarStatusController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(CarStatusController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CarBudgetController.dismissKeyboard))
-        
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-        
         view.addGestureRecognizer(tap)
+        
+        setBanner()
+    }
+    
+    func setBanner() {
+        if let image = advertService?.getBannerImage(for: Adverts.Main.rawValue) {
+            bannerImage.image = image
+        }
+        advertService?.getBannerLink(for: Adverts.Main.rawValue) { result in
+            switch result {
+            case .Success(let link):
+                self.bannerLink = link
+            case .Failure( _):
+                break
+            }
+        }
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(CarBudgetController.tapBannerDetected))
+        singleTap.numberOfTapsRequired = 1
+        bannerImage.isUserInteractionEnabled = true
+        bannerImage.addGestureRecognizer(singleTap)
+    }
+    
+    @objc func tapBannerDetected(){
+        if let url = URL(string: bannerLink!) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
     //Calls this function when the tap is recognized.

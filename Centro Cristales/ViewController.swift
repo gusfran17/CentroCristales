@@ -8,10 +8,14 @@
 
 import UIKit
 
+struct AdvertLink {
+    static let link = "http://www.centrocristales.com"
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var bannerImage: UIImageView!
-    var bannerLink: String?
+    var bannerLink: String? = AdvertLink.link
     var advertService: AdvertService?
     
     override func viewDidLoad() {
@@ -30,7 +34,7 @@ class ViewController: UIViewController {
             case .Success(let link):
                 self.bannerLink = link
             case .Failure( _):
-                self.bannerLink = nil
+                break
             }
         }
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapBannerDetected))
@@ -43,7 +47,6 @@ class ViewController: UIViewController {
         if let url = URL(string: bannerLink!) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,10 +58,12 @@ class ViewController: UIViewController {
         if segue.identifier == "requestCarStatus" {
             if let carStatusController = segue.destination as? CarStatusController {
                 carStatusController.carService = CarService(workOrderAPIClient: WorkOrderAPIClient(), carBudgetAPIClient: nil)
+                carStatusController.advertService = AdvertService(advertAPIClient: AdvertAPIClient())
             }
         } else if segue.identifier == "requestCarBudgeting" {
             if let carBudgetController = segue.destination as? CarBudgetController {
                 carBudgetController.carService = CarService(workOrderAPIClient: nil, carBudgetAPIClient: CarBudgetAPIClient())
+                carBudgetController.advertService = AdvertService(advertAPIClient: AdvertAPIClient())
             }
         }
 

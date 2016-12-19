@@ -12,6 +12,11 @@ class CarBudgetController: UIViewController, UITextFieldDelegate {
 
     var photoUploaded: Bool = false
     var carService: CarService?
+    var advertService: AdvertService?
+
+    
+    @IBOutlet weak var bannerImage: UIImageView!
+    var bannerLink: String? = AdvertLink.link
     @IBOutlet weak var topVerticalSpacingConstraint: NSLayoutConstraint!
 
     @IBOutlet weak var messageTextField: UITextView!
@@ -25,6 +30,19 @@ class CarBudgetController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setDescriptionField()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(CarBudgetController.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CarBudgetController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CarBudgetController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        setBanner()
+        
+    }
+    
+    func setDescriptionField(){
         self.messageTextField.layer.borderWidth = 0.5
         self.messageTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.messageTextField.layer.cornerRadius = 6
@@ -32,16 +50,30 @@ class CarBudgetController: UIViewController, UITextFieldDelegate {
         singleTap.numberOfTapsRequired = 1
         carImageView.isUserInteractionEnabled = true
         carImageView.addGestureRecognizer(singleTap)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(CarBudgetController.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(CarBudgetController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        //Looks for single or multiple taps.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CarBudgetController.dismissKeyboard))
-        
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-        
-        view.addGestureRecognizer(tap)
+    }
+    
+    func setBanner() {
+        if let image = advertService?.getBannerImage(for: Adverts.Main.rawValue) {
+            bannerImage.image = image
+        }
+        advertService?.getBannerLink(for: Adverts.Main.rawValue) { result in
+            switch result {
+            case .Success(let link):
+                self.bannerLink = link
+            case .Failure( _):
+                break
+            }
+        }
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(CarBudgetController.tapBannerDetected))
+        singleTap.numberOfTapsRequired = 1
+        bannerImage.isUserInteractionEnabled = true
+        bannerImage.addGestureRecognizer(singleTap)
+    }
+
+    @objc func tapBannerDetected(){
+        if let url = URL(string: bannerLink!) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
     //Calls this function when the tap is recognized.
