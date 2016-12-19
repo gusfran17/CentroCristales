@@ -10,11 +10,42 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var bannerImage: UIImageView!
+    var bannerLink: String?
+    var advertService: AdvertService?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let advertAPIClient = AdvertAPIClient()
+        advertService = AdvertService(advertAPIClient: advertAPIClient)
+        setBanner()
     }
-
+    
+    func setBanner() {
+        if let image = advertService?.getBannerImage(for: Adverts.Main.rawValue) {
+            bannerImage.image = image
+        }
+        advertService?.getBannerLink(for: Adverts.Main.rawValue) { result in
+            switch result {
+            case .Success(let link):
+                self.bannerLink = link
+            case .Failure( _):
+                self.bannerLink = nil
+            }
+        }
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapBannerDetected))
+        singleTap.numberOfTapsRequired = 1
+        bannerImage.isUserInteractionEnabled = true
+        bannerImage.addGestureRecognizer(singleTap)
+    }
+    
+    @objc func tapBannerDetected(){
+        if let url = URL(string: bannerLink!) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -8,8 +8,6 @@
 
 import Foundation
 
-//http://centrocristales.dynns.com:8094/WSCRMREST/WarnesWSRest.svc/getEstadoSiniestro/NCF297/188517
-
 enum WorkOrderEndpoint: Endpoint {
     case Status(workOrder: Int, badge: String )
     
@@ -17,15 +15,19 @@ enum WorkOrderEndpoint: Endpoint {
         return URL(string: "http://centrocristales.dynns.com:8094")!
     }
     
+    var permPath: String {
+        return "/WSCRMREST/WarnesWSRest.svc"
+    }
+    
     var path: String {
         switch self {
         case .Status(let workOrder, let badge):
-            return "/WSCRMREST/WarnesWSRest.svc/getEstadoSiniestro/\(badge)/\(workOrder)"
+            return "/getEstadoSiniestro/\(badge)/\(workOrder)"
         }
     }
     
     var request: NSMutableURLRequest {
-        let url = URL(string: path, relativeTo: baseURL as URL)!
+        let url = URL(string: permPath + path, relativeTo: baseURL as URL)!
         let result = NSMutableURLRequest(url: url)
         return result
     }
@@ -63,12 +65,12 @@ class WorkOrderAPIClient : WorkOrderAPIClientProtocol {
                         print("Error: \(error)")
                         return nil
                     }
-                //Parse from JSON error response to Car
+                    //Parse from JSON error response to Car
                 } else if let statusText = json["statusText"] as? String,
-                      let status = json["status"] as? Int {
-                            let workOrderObject = WorkOrder(id: workOrder, remarks: "Status: " + String(status), status: .NotFound(statusText))
-                            let car = Car(badge: badge, workOrder: workOrderObject)
-                            return car
+                    let status = json["status"] as? Int {
+                    let workOrderObject = WorkOrder(id: workOrder, remarks: "Status: " + String(status), status: .NotFound(statusText))
+                    let car = Car(badge: badge, workOrder: workOrderObject)
+                    return car
                 }
             }
             return nil

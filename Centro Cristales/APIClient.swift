@@ -27,6 +27,7 @@ protocol JSONDecodable {
 protocol Endpoint {
     var baseURL: URL { get }
     var path: String { get }
+    var permPath: String { get }
     var request: NSMutableURLRequest { get }
 }
 

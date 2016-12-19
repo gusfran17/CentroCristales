@@ -16,12 +16,16 @@ enum CarBudgetEndpoint: Endpoint {
         return URL(string: "http://centrocristales.com")!
     }
     
+    var permPath: String {
+        return "/turnos-app/web/ws/v1"
+    }
+    
     var path: String {
-        return "/turnos-app/web/ws/v1/sendpedidopresupuesto"
+        return "/sendpedidopresupuesto"
     }
     
     var request: NSMutableURLRequest {
-        let url = URL(string: path, relativeTo: baseURL as URL)!
+        let url = URL(string: permPath + path, relativeTo: baseURL as URL)!
         let result = NSMutableURLRequest(url: url)
         return result
     }

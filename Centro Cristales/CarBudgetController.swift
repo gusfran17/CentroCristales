@@ -28,7 +28,7 @@ class CarBudgetController: UIViewController, UITextFieldDelegate {
         self.messageTextField.layer.borderWidth = 0.5
         self.messageTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.messageTextField.layer.cornerRadius = 6
-        let singleTap = UITapGestureRecognizer(target: self, action: #selector(CarBudgetController.tapDetected))
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(CarBudgetController.tapPictureDetected))
         singleTap.numberOfTapsRequired = 1
         carImageView.isUserInteractionEnabled = true
         carImageView.addGestureRecognizer(singleTap)
@@ -54,7 +54,7 @@ class CarBudgetController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
     }
     
-    @objc func tapDetected(){
+    @objc func tapPictureDetected(){
         let newImageView = UIImageView(image: carImageView.image)
         newImageView.frame = self.view.frame
         newImageView.backgroundColor = .black
