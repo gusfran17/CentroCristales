@@ -24,9 +24,9 @@ enum AdvertEndpoint: Endpoint {
     var path: String {
         switch self {
         case .Link(let advertId):
-            return "/bannerlink"
+            return "/bannerlink/\(advertId)"
         case .Image(let advertId):
-            return "/bannerimage"
+            return "/bannerimage/\(advertId)"
         }
     }
     
@@ -55,7 +55,7 @@ class AdvertAPIClient : AdvertAPIClientProtocol {
 
     
     func fetchBannerLink( for advertId: Int, completion: @escaping (APIResult<String>) -> Void) {
-        let request = AdvertEndpoint.Link(advertId: 1).request
+        let request = AdvertEndpoint.Link(advertId: advertId).request
         
         fetch(request: request as URLRequest, parse: { (json) -> String? in
             //Parse from JSON response to Car
@@ -67,7 +67,7 @@ class AdvertAPIClient : AdvertAPIClientProtocol {
     }
     
     func fetchBannerImage( for advertId: Int) -> UIImage? {
-        let request = AdvertEndpoint.Image(advertId: 1).request
+        let request = AdvertEndpoint.Image(advertId: advertId).request
         let data = try? Data(contentsOf: request.url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
         if data != nil {
             return UIImage(data: data!)

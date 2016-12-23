@@ -33,10 +33,10 @@ class CarStatusController: UIViewController, UITextFieldDelegate {
     }
     
     func setBanner() {
-        if let image = advertService?.getBannerImage(for: Adverts.Main.rawValue) {
+        if let image = advertService?.getBannerImage(for: Adverts.CarStatusRequest.rawValue) {
             bannerImage.image = image
         }
-        advertService?.getBannerLink(for: Adverts.Main.rawValue) { result in
+        advertService?.getBannerLink(for: Adverts.CarStatusRequest.rawValue) { result in
             switch result {
             case .Success(let link):
                 self.bannerLink = link

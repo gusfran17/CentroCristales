@@ -53,10 +53,10 @@ class CarBudgetController: UIViewController, UITextFieldDelegate {
     }
     
     func setBanner() {
-        if let image = advertService?.getBannerImage(for: Adverts.Main.rawValue) {
+        if let image = advertService?.getBannerImage(for: Adverts.CarValuationRequest.rawValue) {
             bannerImage.image = image
         }
-        advertService?.getBannerLink(for: Adverts.Main.rawValue) { result in
+        advertService?.getBannerLink(for: Adverts.CarValuationRequest.rawValue) { result in
             switch result {
             case .Success(let link):
                 self.bannerLink = link
